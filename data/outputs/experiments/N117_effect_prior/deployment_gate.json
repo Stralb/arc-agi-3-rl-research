@@ -1,0 +1,14 @@
+{
+  "source": "25 public interactive ARC-AGI-3 games; already exposed in research",
+  "new_deeper_wins": 0,
+  "additional_L2_families_over_existing_local": [],
+  "same_frozen_level1_175_episodes": true,
+  "official_rhae_available": false,
+  "native_game_over_horizons_not_global_75": true,
+  "methodological_limit": "All public environments previously exposed; distinct native seed does not imply distinct initial frames.",
+  "frozen_python_sha256": "e6c6a49c82e93294ae42eb1ee9d87d94a1dde329964e1d7358f63c7d63ba184d",
+  "frozen_notebook_sha256": "1c235b29c71745d80cb639520528a36d2c9e7f4849bc561c645e736f06f745c4",
+  "experimental_python_sha256": "b1846d886e7c076cc5eb91bd0203e5a1826adebb936bfb25c18d3f61452a3330",
+  "experimental_notebook_sha256": "285ed5925eb36ae4b529bc9ded0e6fe3a96f728f0fdcba578e2338c38c468531",
+  "deployment_decision": "retain_frozen_N093"
+}
