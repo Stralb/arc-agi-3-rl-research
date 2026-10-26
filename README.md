@@ -2,7 +2,7 @@
 
 **Repository:** `Stralb/arc-agi-3-rl-research` · **Status:** Public, own code and derived results only; official SDK and original game assets excluded.
 
-**PUBLISHING STATUS (2026-10-26): CURATED PUBLIC ARCHIVE.** Both self-contained agent sources and both Kaggle-format notebooks are now committed. Reports, core tabular evidence and SVG plots are also present. The much larger offline ZIP archive is *not* fully published: original native trace/frame archives, third-party SDK files and some intermediate scripts remain outside the public GitHub tree. See [coverage](docs/REPOSITORY_COVERAGE.md).
+**PUBLISHING STATUS (2026-10-26): CURATED PUBLIC ARCHIVE.** Both self-contained agent sources and both Kaggle-format notebooks are now committed. Reports, core tabular evidence and SVG plots are also present. The much larger offline archive is *not* fully published: original native trace/frame archives, third-party SDK files and some intermediate scripts remain outside the public GitHub tree. The original N114 and N117 native runners and replay verifiers are now committed for authorized local reproduction. See [coverage](docs/REPOSITORY_COVERAGE.md).
 
 This repository organizes a multi-experiment, Kaggle-legal ARC-AGI-3 interactive-agent research project. It contains reproducible Python agent sources, the frozen and experimental Kaggle notebooks, reports, per-family and per-action result files, failure studies and generated plots. The evaluations use **25 historically exposed public interactive game fixtures** and the **native SDK action interface**, not ARC-AGI-1's 400+400 static grid tasks.
 
@@ -33,10 +33,10 @@ src/                  Best public measured agent, frozen baseline, algorithm mod
 notebooks/            Original frozen and local-effect Kaggle-format submissions
 experiments/          N093 and N101–N120 experimental Python, protocols and tests
 reports/              Research synthesis, archived original reports and full findings
-data/outputs/         Native result matrices, per-action traces, model diagnostics
-data/outputs/plots/   Regenerable figures (PNG and SVG)
+data/outputs/         Native summary matrices and selected action-level diagnostics
+data/outputs/plots/   Committed SVG figures; PNGs regenerate locally
 data/provenance/      File-level source/hashes and original asset manifest
-scripts/              Plot regeneration, integrity verification, data expansion
+scripts/              Offline verification, plot regeneration, authorized SDK staging
 tests/                Repository integrity and benchmark-consistency checks
 .github/workflows/    Offline CI that never submits or downloads competition games
 ```
@@ -44,7 +44,7 @@ tests/                Repository integrity and benchmark-consistency checks
 ## Quick start
 
 ```bash
-# After extracting the repo ZIP or cloning your future GitHub repo:
+git clone https://github.com/Stralb/arc-agi-3-rl-research.git
 cd arc-agi-3-rl-research
 python3 scripts/verify_repository.py
 python3 -m unittest discover -s tests -v
@@ -70,3 +70,11 @@ All published counts in this snapshot refer to **archived native local runs**, n
 The Kaggle deployment and leaderboard status is unknown. Neither notebook has been submitted from this repository. The frozen N093 checkpoint is embedded in both source files.
 
 **Research snapshot:** 2026-10-26.
+
+## Key public benchmark figures
+
+![Level completions in frozen N093 versus local effect-memory](data/outputs/plots/01_level_completions.svg)
+
+![Per-family native completion matrix](data/outputs/plots/02_family_completion_matrix.svg)
+
+These plots are computed from historically exposed public runs and are not an official competition score.
