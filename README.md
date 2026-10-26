@@ -15,6 +15,8 @@ This repository organizes a multi-experiment, Kaggle-legal ARC-AGI-3 interactive
 
 The new local-effect Level-2 winner is `tu93`; both agents clear `vc33` Level 2. No tested method completed Level 3. **Neither score is an official Kaggle leaderboard score or human-normalized RHAE.** Lower total action counts can reflect earlier native `GAME_OVER`, not efficiency improvements.
 
+> **Public distribution caveat:** The live GitHub repository includes a curated subset of the much larger offline archive. See [repository coverage](docs/REPOSITORY_COVERAGE.md), [research decisions](reports/RESEARCH_DECISIONS.md) and [provenance](data/provenance/README.md). No private Kaggle score or new Level-3 win is claimed.
+
 ## Structure
 
 ```text
@@ -35,13 +37,13 @@ tests/                Repository integrity and benchmark-consistency checks
 ```bash
 # After extracting the repo ZIP or cloning your future GitHub repo:
 cd arc-agi-3-rl-research
-python3 scripts/verify_artifacts.py
+python3 scripts/verify_repository.py
 python3 -m unittest discover -s tests -v
 python3 -m pip install -r requirements-analysis.txt
 python3 scripts/generate_plots.py
 ```
 
-The first two checks use only the Python standard library. Plot regeneration requires pandas, NumPy and Matplotlib. Native gameplay requires the separately obtained official game SDK and Agents framework; see [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
+The first two checks use only the Python standard library and validate the published subset. They do not validate unavailable original native frames or private Kaggle scores.
 
 ## Read the results
 
