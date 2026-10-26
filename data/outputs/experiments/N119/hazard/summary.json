@@ -1,0 +1,23 @@
+{
+  "definition": "GameOver within five charged actions on same observed level under the archived behavior policy; not per-action causal risk",
+  "n_family_folds": 13,
+  "n_features": 12,
+  "predictors": {
+    "step_only": {
+      "rows": 3668,
+      "positive": 180,
+      "base_rate": 0.04907306434023991,
+      "brier": 0.050080511967367854,
+      "logloss": 0.2060412341303014,
+      "auc": 0.5892193871049949
+    },
+    "history_action": {
+      "rows": 3668,
+      "positive": 180,
+      "base_rate": 0.04907306434023991,
+      "brier": 0.05969559467555635,
+      "logloss": 0.22790909778262375,
+      "auc": 0.6010767074413863
+    }
+  }
+}
