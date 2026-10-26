@@ -1,53 +1,47 @@
-# Reproduction and audit
+# Reproducing the published ARC-AGI-3 evidence
 
-## Standard-library checks (no SDK needed)
+## Standard-library repository checks
 
 ```bash
+git clone https://github.com/Stralb/arc-agi-3-rl-research.git
 cd arc-agi-3-rl-research
-python3 scripts/verify_artifacts.py
+python3 scripts/verify_repository.py
 python3 -m unittest discover -s tests -v
+python3 scripts/summarize_results.py
 ```
 
-These independently verify notebook/source immutability, the benchmark count arithmetic and the stored repository hash manifest. They **do not replay native actions**.
+These checks confirm the **committed** frozen source hashes, notebook validity, public 25-family benchmark arithmetic and SVG plot integrity. They do **not** run the native game SDK, reproduce every original archived trace, check Kaggle submissions or validate private scores.
 
-## Regenerate figures
+## Regenerate aggregated public-result figures
 
 ```bash
 python3 -m pip install -r requirements-analysis.txt
 python3 scripts/generate_plots.py
 ```
 
-## Uncompress the full recorded experiment outputs
+This produces two additional SVG and PNG charts from the CSVs in `data/outputs/benchmarks/`. All prior published charts remain available as SVG in `data/outputs/plots/`.
 
-```bash
-python3 scripts/materialize_outputs.py --experiment N120 --destination /tmp/arc_n120_outputs
-```
+## Native replay and source archives
 
-The decompressed directory contains the original result relative paths. The SHA-256 origin manifest records their source archive and original bytes.
+The original offline research archive included the official SDK/game fixtures, experiment-specific native runners and extensive per-step action/frame records. It is **not fully mirrored to this public repository**.
 
-## Reproduce native public-game evaluation
+- Original SDK reference archive: `N100_ACTIVE_FSM_20261025.zip`, SHA-256 `b012aa0eaf3d4e5c5fa1bd3c99711cc24810a9df043545586db3be0de922c888`.
+- Archived N114 native harness: `N114_VALID_ARC3_PUBLIC_20261026`, original 25-family replay.
+- Archived N117 native comparison: `ARC_DEEP_RL_AUDIT_20261026`, original local effect-memory evidence.
 
-The **offline SDK runtime and public game fixtures are not shipped in this repository** because the competition's redistribution terms require a separate rights review. Obtain them through the authorized ARC-AGI-3 development channel, not via repo auto-download. Archived reference runtime SHA-256: `b012aa0eaf3d4e5c5fa1bd3c99711cc24810a9df043545586db3be0de922c888` for `N100_ACTIVE_FSM_20261025.zip`.
+Those archived tools require separately authorized SDK assets and the original directory layout. Do not attempt to execute them with missing files or claim the GitHub subset is a complete replay environment.
 
-The original N114 runner and N093 source checks are under `experiments/N114/`, with the original unmodified N114 report at `reports/findings/N114.md`. To reproduce in the original staging layout, use the archived N114 reproduction directory and restore its `inputs/N100_ACTIVE_FSM_20261025.zip` and `inputs/submission.py`. Then run:
+The public `experiments/` directory contains selected implementational variants, experiment notes and changelogs. The original archive holds additional scripts, tests, raw frames and engine-specific fixtures. See [repository coverage](REPOSITORY_COVERAGE.md).
 
-```bash
-cd N114_VALID_ARC3_PUBLIC_20261026
-export OPENBLAS_NUM_THREADS=1
-python3 prepare_runtime.py
-python3 verify_release.py
-python3 run_all_isolated.py --output-dir reproduction/fresh --timeout-seconds 90
-```
+## Verified historical public findings
 
-Those commands apply to the **original archived layout**, not the curated GitHub source-only snapshot. The reusable scripts in this repository are retained for audit and to simplify rebuilding that layout; they are not claimed to be independently runnable without the original framework and fixtures.
+- Frozen N093: 13 Level-1, 1 Level-2 (`vc33`), 0 Level-3+; 2,982 charged SDK actions across 25 games.
+- Experimental local effect-memory: 13 Level-1, 2 Level-2 (`vc33`, `tu93`), 0 Level-3+; 2,790 charged SDK actions.
+- Both scores are **public offline native level counts**, not private Kaggle scores or human-normalized RHAE.
+- All games are historically exposed. Repeated seeds with identical start frames do not establish independent generalization.
 
-The N117 original archive similarly supplies the fully reconstructible local-effect evaluation, but also requires N100 inputs, original result paths and the official game agent. Use the user-held original evidence archives for complete end-to-end replay.
+## Method constraints
 
-## Rules
+Only legal native SDK actions are charged; no game-specific solutions, privileged source physics, shadow oracle, future frame or uncharged resets belong in a deployable acting controller. Level action budgets are bounded at 200, while native `GAME_OVER` can happen earlier.
 
-- Offline CPU notebooks, no Internet in competition reruns.
-- Charged native actions only, no future observation, hidden engine variables, oracle path or simulator resets.
-- Per-level cap of 200 policy actions; native `GAME_OVER` may happen earlier.
-- No official Kaggle submission, score, private test set or human-normalized RHAE can be verified from this repository.
-
-The `data/provenance/origins.csv` lists copied files and original SHA-256 hashes.
+The repository is public. Do not redistribute private competition assets, credentials or unlicensed game-engine code.

@@ -2,7 +2,7 @@
 
 **Repository:** `Stralb/arc-agi-3-rl-research` · **Status:** Public, own code and derived results only; official SDK and original game assets excluded.
 
-**PUBLISHING STATUS (2026-10-26): PARTIAL.** The research documentation, selected source modules, measured CSVs, and source-derived SVG figure are committed. The 1.6 MB standalone primary agent, notebooks, and several archives have **not** yet been uploaded because the connected GitHub content-write tool blocked large-file transfers. Do not assume the default `src/best_public_agent.py` path is available in this remote repository. The local release bundle remains authoritative until this gap is resolved.
+**PUBLISHING STATUS (2026-10-26): CURATED PUBLIC ARCHIVE.** Both self-contained agent sources and both Kaggle-format notebooks are now committed. Reports, core tabular evidence and SVG plots are also present. The much larger offline ZIP archive is *not* fully published: original native trace/frame archives, third-party SDK files and some intermediate scripts remain outside the public GitHub tree. See [coverage](docs/REPOSITORY_COVERAGE.md).
 
 This repository organizes a multi-experiment, Kaggle-legal ARC-AGI-3 interactive-agent research project. It contains reproducible Python agent sources, the frozen and experimental Kaggle notebooks, reports, per-family and per-action result files, failure studies and generated plots. The evaluations use **25 historically exposed public interactive game fixtures** and the **native SDK action interface**, not ARC-AGI-1's 400+400 static grid tasks.
 
