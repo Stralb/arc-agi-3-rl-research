@@ -17,6 +17,15 @@ The new local-effect Level-2 winner is `tu93`; both agents clear `vc33` Level 2.
 
 > **Public distribution caveat:** The live GitHub repository includes a curated subset of the much larger offline archive. See [repository coverage](docs/REPOSITORY_COVERAGE.md), [research decisions](reports/RESEARCH_DECISIONS.md) and [provenance](data/provenance/README.md). No private Kaggle score or new Level-3 win is claimed.
 
+## Browse the committed research
+
+- [Complete research-report index](reports/INDEX.md)
+- [Experiment implementations and protocols](experiments/INDEX.md)
+- [Results tables and plots](data/outputs/INDEX.md)
+- [Original archive SHA-256 evidence](data/provenance/ARCHIVE_SHA256_MANIFEST.json)
+- [Published-versus-omitted evidence inventory](docs/REPOSITORY_COVERAGE.md)
+- [Offline reproduction and CI checks](docs/REPRODUCIBILITY.md)
+
 ## Structure
 
 ```text
