@@ -1,0 +1,179 @@
+{
+  "baseline_N093": {
+    "L1": 13,
+    "L2": 1,
+    "L3": 0,
+    "sdk": 2982
+  },
+  "local_effect": {
+    "L1": 13,
+    "L2": 2,
+    "L3": 0,
+    "sdk": 2790
+  },
+  "mc_value": {
+    "L1": 13,
+    "L2": 2,
+    "L3": 0,
+    "sdk": 2787
+  },
+  "pre_level3_action_and_frame_parity": "25/25 games exact",
+  "local_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 0,
+      "online_training_batches": 0
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 79,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 35,
+      "L3_choice_changes_vs_local": 0,
+      "online_training_batches": 0
+    }
+  ],
+  "value_mc_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 23,
+      "online_training_batches": 0
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 76,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 32,
+      "L3_choice_changes_vs_local": 2,
+      "online_training_batches": 0
+    }
+  ],
+  "value_td_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 21,
+      "online_training_batches": 0
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 76,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 32,
+      "L3_choice_changes_vs_local": 2,
+      "online_training_batches": 0
+    }
+  ],
+  "value_shuffle_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 20,
+      "online_training_batches": 0
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 76,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 32,
+      "L3_choice_changes_vs_local": 2,
+      "online_training_batches": 0
+    }
+  ],
+  "value_hard_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 66,
+      "online_training_batches": 0
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 79,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 35,
+      "L3_choice_changes_vs_local": 29,
+      "online_training_batches": 0
+    }
+  ],
+  "value_state_only_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 0,
+      "online_training_batches": 0
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 79,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 35,
+      "L3_choice_changes_vs_local": 0,
+      "online_training_batches": 0
+    }
+  ],
+  "value_td_online_targeted": [
+    {
+      "family": "vc33",
+      "levels": 2,
+      "sdk_actions": 105,
+      "L1_actions": 3,
+      "L2_actions": 27,
+      "L3_actions": 75,
+      "L3_choice_changes_vs_local": 30,
+      "online_training_batches": 4
+    },
+    {
+      "family": "tu93",
+      "levels": 2,
+      "sdk_actions": 76,
+      "L1_actions": 22,
+      "L2_actions": 22,
+      "L3_actions": 32,
+      "L3_choice_changes_vs_local": 3,
+      "online_training_batches": 4
+    }
+  ],
+  "frozen_hashes": {
+    "submission.py": "e6c6a49c82e93294ae42eb1ee9d87d94a1dde329964e1d7358f63c7d63ba184d",
+    "submission.ipynb": "1c235b29c71745d80cb639520528a36d2c9e7f4849bc561c645e736f06f745c4"
+  }
+}
