@@ -24,3 +24,16 @@ data/inputs/private/
 data/inputs/sdk/
 data/inputs/competition/
 # Intermediate native experiment results are stored only after provenance review
+
+# Owner-held native game SDK, research workdirs and snapshots (never publish blindly)
+experiments/*/work/
+experiments/*/inputs/
+experiments/*/results/
+experiments/*/reproduction/
+**/N100_ACTIVE_FSM_20261025.zip
+**/FROZEN_B1_PRETRAINED_PUCT_KAGGLE_20261025.zip
+arc-prize-2026-arc-agi-3.zip
+*.parquet
+*.pem
+*_credentials*.json
+*_token.txt
