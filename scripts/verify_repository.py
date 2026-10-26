@@ -51,6 +51,8 @@ def verify():
     for rel in ("notebooks/README.md", "docs/ARCHITECTURE.md", "reports/RESEARCH_SUMMARY.md"):
         text = (ROOT / rel).read_text(encoding="utf-8")
         assert "The requested file reference is not currently visible" not in text, rel
+    assert (ROOT / "reports/RESEARCH_SUMMARY.md").read_text(encoding="utf-8").startswith("# Results and limitations")
+    assert (ROOT / "reports/EXPERIMENT_CATALOG.md").read_text(encoding="utf-8").startswith("# Research index")
     plots = list((ROOT / "data/outputs/plots").glob("*.svg"))
     assert len(plots) >= 5, "SVG plots missing"
     print("PASS: published source hashes, notebooks, 25-game arithmetic, derived SVG figures")
