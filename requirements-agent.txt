@@ -1,0 +1,3 @@
+# Competition runtime is supplied by the official ARC-AGI-3 environment.
+# Do not install a private game engine or infer privileged state.
+numpy>=1.24

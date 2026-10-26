@@ -1,0 +1,25 @@
+{
+  "repository": "Stralb/arc-agi-3-rl-research",
+  "as_of": "2026-10-26",
+  "access": "public",
+  "benchmark": "25 historically exposed public ARC-AGI-3 interactive games",
+  "best_public": {
+    "controller": "local effect-memory",
+    "level1": 13,
+    "level2": 2,
+    "level3plus": 0,
+    "total": 15
+  },
+  "frozen_n093": {
+    "level1": 13,
+    "level2": 1,
+    "level3plus": 0,
+    "total": 14
+  },
+  "level3_native_wins": 0,
+  "official_kaggle_score": "not established",
+  "kaggle_submission": "not verified",
+  "deployment": "frozen N093 fallback; local effect-memory remains experimental",
+  "runtime_data": "SDK binaries and competition datasets excluded; archived restricted native frames not redistributed",
+  "verification": "subset of historical experimental evidence; full original archive is not committed; see docs/REPOSITORY_COVERAGE.md"
+}

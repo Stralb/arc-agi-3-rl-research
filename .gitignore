@@ -1,0 +1,26 @@
+# Python and generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+*.log
+*.tmp
+*.swp
+.DS_Store
+# Credentials and locally downloaded competition assets
+.kaggle/
+kaggle.json
+access_token
+private/
+secrets/
+third_party/downloads/
+data/inputs/private/
+data/inputs/sdk/
+data/inputs/competition/
+# Intermediate native experiment results are stored only after provenance review
