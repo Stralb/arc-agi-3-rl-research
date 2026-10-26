@@ -1,3 +1,5 @@
+> **Public repository edition:** The modular policy, original N117 legal-native runner, replay verifier and archived tests are committed. The `inputs/`, `work/`, original `results/` action/frame histories, notebooks in the original experiment folder and several auxiliary scripts described below are **not** included. The standalone candidate lives at [`src/best_public_agent.py`](../../src/best_public_agent.py). To stage and run the published native portion, use [the authorized setup instructions](../../docs/REPRODUCIBILITY.md). Experiment tests require the original archived ledgers and will not pass on the public subset alone.
+
 # ARC-AGI-3 Deep-Level RL Audit — Frozen N093 vs Effect-Conditioned Action Ranking
 
 **Status:** experimental native improvement (+1 Level-2 completion on exposed `tu93`), **not a hidden-game validated replacement**. All game interactions were charged public SDK actions; no game-source strategy, LLM/VLM, shadow oracle or hidden observations used.
