@@ -1,0 +1,116 @@
+{
+  "mixed": {
+    "families": 25,
+    "level1": 13,
+    "level2": 1,
+    "level3plus": 0,
+    "level2_families": [
+      "vc33"
+    ],
+    "total_completed_levels": 14,
+    "charged_sdk_actions": 2975,
+    "pairs_completed": 288,
+    "pairs_rewarded": 0,
+    "pair_actions": 573,
+    "pair_smdp_updates": 288,
+    "pair_value_changes": 259,
+    "abort_penalties": 0,
+    "different_from_frozen_trajectories": 13,
+    "exact_level1_action_and_frame_parity": 25
+  },
+  "cross": {
+    "families": 25,
+    "level1": 13,
+    "level2": 1,
+    "level3plus": 0,
+    "level2_families": [
+      "vc33"
+    ],
+    "total_completed_levels": 14,
+    "charged_sdk_actions": 2966,
+    "pairs_completed": 281,
+    "pairs_rewarded": 0,
+    "pair_actions": 559,
+    "pair_smdp_updates": 281,
+    "pair_value_changes": 281,
+    "abort_penalties": 0,
+    "different_from_frozen_trajectories": 13,
+    "exact_level1_action_and_frame_parity": 25
+  },
+  "repeat": {
+    "families": 25,
+    "level1": 13,
+    "level2": 1,
+    "level3plus": 0,
+    "level2_families": [
+      "vc33"
+    ],
+    "total_completed_levels": 14,
+    "charged_sdk_actions": 3006,
+    "pairs_completed": 288,
+    "pairs_rewarded": 0,
+    "pair_actions": 573,
+    "pair_smdp_updates": 288,
+    "pair_value_changes": 257,
+    "abort_penalties": 0,
+    "different_from_frozen_trajectories": 13,
+    "exact_level1_action_and_frame_parity": 25
+  },
+  "mixed_no_q": {
+    "families": 25,
+    "level1": 13,
+    "level2": 1,
+    "level3plus": 0,
+    "level2_families": [
+      "vc33"
+    ],
+    "total_completed_levels": 14,
+    "charged_sdk_actions": 2969,
+    "pairs_completed": 288,
+    "pairs_rewarded": 0,
+    "pair_actions": 573,
+    "pair_smdp_updates": 0,
+    "pair_value_changes": 0,
+    "abort_penalties": 0,
+    "different_from_frozen_trajectories": 13,
+    "exact_level1_action_and_frame_parity": 25
+  },
+  "adaptive": {
+    "families": 25,
+    "level1": 13,
+    "level2": 0,
+    "level3plus": 0,
+    "level2_families": [],
+    "total_completed_levels": 13,
+    "charged_sdk_actions": 2879,
+    "pairs_completed": 278,
+    "pairs_rewarded": 0,
+    "pair_actions": 553,
+    "pair_smdp_updates": 278,
+    "pair_value_changes": 275,
+    "abort_penalties": 0,
+    "different_from_frozen_trajectories": 13,
+    "exact_level1_action_and_frame_parity": 25
+  },
+  "frozen_N093": {
+    "families": 25,
+    "level1": 13,
+    "level2": 1,
+    "level3plus": 0,
+    "charged_sdk_actions": 2982,
+    "level2_families": [
+      "vc33"
+    ]
+  },
+  "causal_pair_q_ablation": {
+    "changed_games": 5,
+    "families": [
+      "ar25",
+      "dc22",
+      "g50t",
+      "ls20",
+      "sp80"
+    ],
+    "extra_level_completions": 0
+  }
+}
