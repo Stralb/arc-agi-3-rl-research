@@ -35,4 +35,19 @@ This directory holds curated **derived** tabular evidence from permitted, histor
 | [`plots/07_level2_failure_modes.svg`](plots/07_level2_failure_modes.svg) | SVG figure |
 | [`plots/public_level_completions.svg`](plots/public_level_completions.svg) | SVG figure |
 
+## Newly restored original JSON research summaries
+
+The following compact JSON files are original offline experiment outputs. Their public release does not recreate the full frame-level evidence; see the original archive checksums in `data/provenance/`.
+
+| File | Contents |
+|---|---|
+| [`experiments/N114/verified_summary.json`](experiments/N114/verified_summary.json) | Original baseline parity/25-game native verification summary |
+| [`experiments/N115/N115_summary.json`](experiments/N115/N115_summary.json) | Original joint-action ablation summary |
+| [`experiments/N117_effect_prior/prequential_summary.json`](experiments/N117_effect_prior/prequential_summary.json) | False-negative and calibration diagnostic |
+| [`experiments/N117_effect_prior/deployment_gate.json`](experiments/N117_effect_prior/deployment_gate.json) | Original deployment decision |
+| [`experiments/N118/prequential/summary.json`](experiments/N118/prequential/summary.json) | History-conditioned prediction controls |
+| [`experiments/N119/hazard/summary.json`](experiments/N119/hazard/summary.json) | Family-held-out GAME_OVER hazard audit |
+| [`experiments/N119/analysis/summary.json`](experiments/N119/analysis/summary.json) | Delayed-credit / recurrence-risk native results |
+| [`experiments/N120/native_summary.json`](experiments/N120/native_summary.json) | N120 episodic-value native ablations |
+
 Interpreting the tables: a shorter game can mean earlier native `GAME_OVER`, not better efficiency. Raw completed-level counts are **not** the human-normalized RHAE metric or the official hidden Kaggle score.
