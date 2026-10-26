@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420">
+<rect width="940" height="420" fill="#ffffff"/><text x="60" y="47" font-size="25" font-family="Arial" fill="#111827" font-weight="bold">ARC-AGI-3 public 25-game completion results</text>
+<text x="60" y="75" font-size="15" font-family="Arial" fill="#4b5563">Native level completions; historically exposed development games, not a Kaggle hidden score</text>
+<line x1="65" y1="341" x2="860" y2="341" stroke="#9ca3af" stroke-width="2"/>
+<g font-family="Arial" font-size="16" fill="#1f2937">
+<text x="175" y="385" text-anchor="middle">Frozen N093</text><text x="455" y="385" text-anchor="middle">Local effect</text><text x="735" y="385" text-anchor="middle">Value / effect experiments</text>
+</g>
+<rect x="98" y="115" width="154" height="226" fill="#687f94"/><rect x="98" y="98" width="154" height="17" fill="#e0a648"/>
+<rect x="378" y="115" width="154" height="226" fill="#687f94"/><rect x="378" y="80" width="154" height="35" fill="#e0a648"/>
+<rect x="658" y="115" width="154" height="226" fill="#687f94"/><rect x="658" y="80" width="154" height="35" fill="#e0a648"/>
+<g font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff"><text x="175" y="232" text-anchor="middle">L1: 13</text><text x="455" y="232" text-anchor="middle">L1: 13</text><text x="735" y="232" text-anchor="middle">L1: 13</text></g>
+<g font-family="Arial" font-size="15" fill="#111827"><text x="175" y="105" text-anchor="middle">L2: 1</text><text x="455" y="100" text-anchor="middle">L2: 2</text><text x="735" y="100" text-anchor="middle">L2: 2</text></g>
+<text x="65" y="405" fill="#4b5563" font-size="13" font-family="Arial">No Level-3 completions in any listed arm. Deep-level generalization remains unverified.</text></svg>
