@@ -1,0 +1,13 @@
+{
+  "date":"2026-10-26",
+  "objective":"maximize deep native ARC-AGI-3 level completions and eventually RHAE, without privileged information",
+  "baseline":"immutable B1+N093 PUCT, gamma 0.985, c 0.1, temperature 2.0, optimistic Q=1",
+  "main_comparison":"25 exposed public native games, seed 47, policy seed 76, 200 charged actions per unfinished level",
+  "ablation_comparison":"13 games whose frozen baseline completes Level 1; Level 1 unchanged by construction",
+  "historical_split":{"training":["ar25","bp35","cn04","dc22","g50t","ka59","lf52","lp85","m0r0","re86","sb26","sp80","tn36","tu93","wa30"],"validation":["cd82","ls20","sc25","sk48","su15"],"historically_exposed_test":["ft09","r11l","s5i5","tr87","vc33"]},
+  "constraints":["no LLM or VLM","no game-ID-conditioned action strategies","no shadow SDK oracles","all native actions charged","no pseudo native rewards","legal actions only","no cross-level raw-frame Q table transfer","no hidden or future engine states"],
+  "official_rhae_measured":false,
+  "hidden_kaggle_score_measured":false,
+  "promotion_gate":"improved multiple independent native families/configurations and weighted scoring, not achieved",
+  "deployment_decision":"retain immutable frozen B1+N093 submission"
+}
