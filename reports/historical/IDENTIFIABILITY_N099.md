@@ -1,0 +1,9 @@
+# N099: Why a single Level-1 trajectory cannot prove the Level-2 key
+
+The recorded source `vc33` Level-1 sequence contains three clicks on the same component and reward on click three. There is no observed state where this component fails, no alternative-control experiment, and no explicit Level-1 key activation. The outgoing terminal frame reveals an alignment associated with reward, not a unique enabling rule.
+
+Construct two hypothetical worlds with *identical Level-1 observations, available actions, terminal frame and rewards*. In both Level-2 worlds a reducer makes initial progress and then stalls. In world A a left key unlocks the next useful reducer action; in world B a right key unlocks it. Before either key is tried, the agent's entire legal observation history is identical in the two worlds. The best restricted seven-action plans for A and B make different key choices. No source-only deterministic policy can guarantee both shortest plans; acquiring the missing bit of information requires an intervention or an additional observation that distinguishes the worlds.
+
+This is an **identifiability counterexample**, not a claim that the real ARC `vc33` engine implements these two toy worlds. It rules out N099's promise of guaranteed seven-action zero-probe goal regression *from the available Level-1 evidence alone*. It does not rule out learning useful conditional transition dynamics from charged observations, probabilistic modelling, or obtaining new admissible evidence in other games.
+
+`python -c 'from n099.identifiability import counterexample; print(counterexample())'` runs the self-contained synthetic witness. Native ARC scores do not use it.
