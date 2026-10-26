@@ -9,13 +9,14 @@ This repository is intended as a **curated, auditable public research record**, 
 - Native controller implementations N101–N120 where present.
 - N108–N120 findings and key public per-family comparison tables.
 - Reproducible SVG plots of public outcomes.
+- Original N114 full 25-game native runner and parity verifier, plus N117 local-effect native runner, event-level policy module, replay verifier and test source. Execution requires separately authorized SDK archives and original data.
 - Source-defined constraints, caveats and rollback guidance.
 
 ## Different archival state
 
 The separately prepared offline archival ZIP contained 1,355 entries, including 921 `.gz` files and extensive native trace/frame data. GitHub's present tree does **not** contain all those bytes, nor should they be silently inferred from a report.
 
-The public repository omits or reduces original game-specific native screenshots, official SDK/game assets, unreviewed third-party code, repeated raw action/frame archives, model checkpoints and redundant experiment logs. Their distribution rights and data provenance should be reviewed first.
+The public repository omits or reduces original game-specific native screenshots, official SDK/game assets, unreviewed third-party code, repeated raw action/frame archives, model checkpoints and redundant experiment logs. N114 and N117 runner source is now published, but neither constitutes a fresh rerun without the original owner-held SDK. Their distribution rights and data provenance should be reviewed first.
 
 A file hash is evidence only when the corresponding file is actually present. `scripts/verify_repository.py` checks the **published subset**, not all 1,285 checks from the offline archival ZIP.
 
