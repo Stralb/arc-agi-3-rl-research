@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "n_families": 25,
+  "sdk_actions": 2982,
+  "completed_l1": 13,
+  "completed_l2": 1,
+  "completed_l3plus": 0,
+  "n093_parity_families": 10,
+  "n093_parity_actions": 1176,
+  "per_family_n093_parity": {
+    "vc33": 105,
+    "ar25": 200,
+    "cd82": 108,
+    "g50t": 147,
+    "lp85": 196,
+    "ls20": 79,
+    "m0r0": 176,
+    "s5i5": 50,
+    "sc25": 43,
+    "tu93": 72
+  },
+  "sha256_submission_py": "e6c6a49c82e93294ae42eb1ee9d87d94a1dde329964e1d7358f63c7d63ba184d",
+  "sha256_submission_ipynb": "1c235b29c71745d80cb639520528a36d2c9e7f4849bc561c645e736f06f745c4",
+  "sha256_N100_archive": "b012aa0eaf3d4e5c5fa1bd3c99711cc24810a9df043545586db3be0de922c888"
+}
