@@ -1,0 +1,74 @@
+{
+  "copied": [
+    {
+      "path": "neural_coursework/tests/test_adapter.py",
+      "bytes": 5672,
+      "sha256": "da8dab5a3fe7b05f8ce797735fef9e7d09e253f5f0aae9ef911ac7ff429a1758"
+    },
+    {
+      "path": "neural_coursework/tests/test_bridge.py",
+      "bytes": 3687,
+      "sha256": "ef936f3e5b66aa2301bacd9894b31ebef532969009dcbf32223db34c0b1ec2f5"
+    },
+    {
+      "path": "neural_coursework/tests/test_learners.py",
+      "bytes": 10505,
+      "sha256": "a555c35b835f65fdbcbe3b8c9ec8ecf8eee29632bcd2ea47a54e1bc8084c6d28"
+    },
+    {
+      "path": "neural_coursework/tests/test_lifecycle.py",
+      "bytes": 2726,
+      "sha256": "1624d6feaa0d23d2a38d9222e70b6a2c5be36bffb3d184b45f2647623630b61e"
+    },
+    {
+      "path": "neural_coursework/tests/test_run.py",
+      "bytes": 2264,
+      "sha256": "d651cf6410f2e84a6d045e9f7ef289ffc4c15fac0cae023596b20647859eae4a"
+    },
+    {
+      "path": "neural_coursework/tests/test_synthetic.py",
+      "bytes": 2242,
+      "sha256": "6a302f27658aeb39b739931ece671265439ffe1c4842b29053eb85ebe4a70f82"
+    },
+    {
+      "path": "neural_coursework/requirements.txt",
+      "bytes": 736,
+      "sha256": "ba202bb9bb8c0c8580ccdc8504e002bc3d57739db69382a2a6f4655f1f71548f"
+    },
+    {
+      "path": "neural_coursework/assets/dqn_v1/checkpoints/E-onehotcnn__T-stack2__A-vector__U-effect__f0__s11.pt",
+      "bytes": 748733,
+      "sha256": "c5882f664b082aa131023ac1ffaebeb771ba7fe181fa909730fe1c641e5978b9"
+    },
+    {
+      "path": "neural_coursework/assets/dqn_v1/checkpoints/E-onehotcnn__T-stack2__A-vector__U-effect__f1__s11.pt",
+      "bytes": 748733,
+      "sha256": "956177a4e4a188260772e96c42a6ba5c6844896aa6194531d9d6a58071a0673c"
+    },
+    {
+      "path": "neural_coursework/assets/dqn_v1/checkpoints/E-onehotcnn__T-stack2__A-vector__U-effect__f2__s11.pt",
+      "bytes": 748733,
+      "sha256": "0e64b76a0444101c42fc1a599bc7a5596b1160aa7281b71a26d79bb5b470636b"
+    },
+    {
+      "path": "neural_coursework/assets/dqn_v1/checkpoints/E-onehotcnn__T-stack2__A-vector__U-effect__f3__s11.pt",
+      "bytes": 748733,
+      "sha256": "192b86f43a268566055c62158c67b01d4f1372e389610fbfd9448c1392a9d7c8"
+    },
+    {
+      "path": "neural_coursework/assets/dqn_v1/checkpoints/E-onehotcnn__T-stack2__A-vector__U-effect__f4__s11.pt",
+      "bytes": 748733,
+      "sha256": "605e9856c98515c21efa315b8b5b3303733442af6ffc6a7752c99cc9fea8a7ab"
+    },
+    {
+      "path": "neural_coursework/README.md",
+      "bytes": 2340
+    }
+  ],
+  "same": [
+    "src/dqn_v1/exploration.py",
+    "src/dqn_v1/prior.py"
+  ],
+  "conflicts": [],
+  "missing": []
+}
