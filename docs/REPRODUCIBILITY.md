@@ -21,7 +21,7 @@ python3 -m pip install -r requirements-analysis.txt
 python3 scripts/generate_plots.py
 ```
 
-This produces two additional SVG and PNG charts from the CSVs in `data/outputs/benchmarks/`. All prior published charts remain available as SVG in `data/outputs/plots/`.
+This produces three additional SVG and PNG charts from the CSVs in `data/outputs/benchmarks/`. All prior published charts remain available as SVG in `data/outputs/plots/`.
 
 ## Rebuild and verify the E126 Kaggle candidate offline
 

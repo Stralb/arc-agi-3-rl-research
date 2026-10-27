@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate two visualizations from verified public-game summary CSV files.
+"""Regenerate public-development charts from committed summary CSV files.
 Only aggregated public-development results are plotted; no SDK access is used.
 """
 from pathlib import Path
@@ -54,7 +54,31 @@ def main():
     fig.savefig(OUT / "recomputed_family_completion_matrix.svg")
     fig.savefig(OUT / "recomputed_family_completion_matrix.png", dpi=160)
     plt.close(fig)
-    print("Regenerated SVG and PNG figures from committed 25-family results.")
+    # Later E126 public-development comparison, separate from N093/N117 baseline.
+    with (ROOT / "experiments/E126/results/all_arms.csv").open(newline="", encoding="utf-8") as f:
+        release_rows = [row for row in csv.DictReader(f) if row["family"] == "E126"]
+    release = {(int(row["seed"]), row["arm"]): row for row in release_rows}
+    seeds = (76, 77, 78)
+    base_levels = [int(release[(seed, "baseline")]["completed_levels"]) for seed in seeds]
+    hybrid_levels = [int(release[(seed, "hybrid_trained")]["completed_levels"]) for seed in seeds]
+    fig, ax = plt.subplots(figsize=(7.5, 4.4))
+    ax.bar([s - .18 for s in range(3)], base_levels, width=.36, label="N117 control")
+    ax.bar([s + .18 for s in range(3)], hybrid_levels, width=.36, label="E126 hybrid")
+    ax.set_xticks(range(3), [str(seed) for seed in seeds])
+    ax.set_xlabel("Policy seed")
+    ax.set_ylabel("Completed public-game levels")
+    ax.set_ylim(0, 18)
+    ax.set_title("E126 on exposed games (not hidden Kaggle score)")
+    ax.legend()
+    for i, value in enumerate(base_levels):
+        ax.text(i - .18, value + .15, str(value), ha="center", fontsize=9)
+    for i, value in enumerate(hybrid_levels):
+        ax.text(i + .18, value + .15, str(value), ha="center", fontsize=9)
+    fig.tight_layout()
+    fig.savefig(OUT / "recomputed_e126_seed_levels.svg")
+    fig.savefig(OUT / "recomputed_e126_seed_levels.png", dpi=160)
+    plt.close(fig)
+    print("Regenerated N093/N117 and E126 public-result charts (no SDK used).")
 
 if __name__ == "__main__":
     main()

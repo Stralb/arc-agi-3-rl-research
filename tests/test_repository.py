@@ -54,6 +54,15 @@ class PublishedRepoTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_summary_includes_the_versioned_e126_result(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/summarize_results.py")],
+            cwd=ROOT, capture_output=True, text=True
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("E126 policy seed 76:", result.stdout)
+        self.assertIn("hybrid=16 levels", result.stdout)
+
     def test_svg_plots_parse(self):
         plots = sorted((ROOT / "data/outputs/plots").glob("*.svg"))
         self.assertGreaterEqual(len(plots), 5)

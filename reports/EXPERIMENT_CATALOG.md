@@ -22,8 +22,8 @@ The archive preserves every major experiment and failure analysis without presen
 | N118 | History-conditioned effect predictions | Better Brier/log-loss but no reward improvement |
 | N119 | Delayed credit and terminal-risk proxies | Trajectory changes, no extra level rewards |
 | N120 | Monte Carlo return and TD(lambda) value networks | No Level-3 win; insufficient higher-level positive training labels |
+| **E124–E126** | **Observation-conditioned click ranking and transferred pretrained effect prior** | **16 levels for each of three public seeds vs 15/14/15 N117; no L3 or hidden-game evidence** |
 
 `N117` is used here as a repository catalog label for the **2026-10-26 deep-RL audit**; the archived directory does not claim this was an official N117 experiment number. This label is organizational, not an attempt to rewrite experiment history.
 
 For provenance and individual protocol, inspect the unmodified original reports rather than relying only on this summary.
-| E124–E126 | Observation-conditioned click ranking and transferred pretrained effect prior | Public candidate reaches 16 levels in each of three policy seeds vs 15/14/15 for N117; no L3 and no independently verified hidden gain |
