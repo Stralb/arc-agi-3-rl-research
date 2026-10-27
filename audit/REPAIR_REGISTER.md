@@ -18,3 +18,11 @@ Statuses: OPEN, IN PROGRESS, BLOCKED, DONE. Verification terms follow EVIDENCE_L
 | RR-012 | P2 | Main code under `src/local_effect_policy.py` had stale import, repaired in main latest commit. | Keep fix; preserve frozen N093/N117 sources; validate unit tests when a local checkout is available. | DONE (source change existed) | Commit `49b966d` fixes import; execution of tests not independently rerun here. |
 | RR-013 | P2 | Existing diagrams may have incomplete provenance and older charts were removed during repo cleanup. | Regenerate supported figures from original CSV using scripts; never recreate unsupported chart counts. | OPEN | Latest commit archives unsupported charts; no local regeneration yet. |
 | RR-014 | P2 | E128 main text appears to fit 8-page maximum; source/template parity unestablished. | Find actual E128 .tex, style and figure scripts; verify exact PDF build and disabled RLJ cover. | OPEN | PDF inspected: 8 pages main + 2 references. |
+
+## Grading-specification update — 2026-10-27
+See [full 44-row matrix](REQUIREMENT_TO_EVIDENCE_MATRIX.md). No scientific results were modified.
+- RR-015 [P0, OPEN]: Recover raw DQN/PPO 72-run sources, 12 random and 24 PPO ablation trajectories, gradient updates/checkpoints and native scorer versions; do not promote N117/E126 as PPO.
+- RR-016 [P0, OPEN]: Recover proper policy-checkpoint learning or measured adaptation curves. Figure 2 of E128 is within-run event timing, **not** the required checkpoint-learning curve.
+- RR-017 [P0, OPEN]: Resolve author contributions and Moodle/Paper Track/Kaggle nomination receipts. Leaderboard 10 cannot be scored without eligible class rank.
+- RR-018 [P1, OPEN]: Verify PPO masked log-prob and action legality; verify DQN-I2 conditional-stall policy is substantive rather than pure hyperparameter tuning; disclose frozen effect-model pretraining.
+- RR-019 [P1, OPEN]: Reconcile E126 server receipt/version *chronologically*: current E128 PDF postdates public main commit, so contradicting status descriptions do not themselves prove a false claim.
