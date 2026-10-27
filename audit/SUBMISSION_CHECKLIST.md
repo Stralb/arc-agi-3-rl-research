@@ -71,3 +71,7 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## Cross-examination checkpoint — 2026-10-27
 [Formal moderator rulings](SCIENTIFIC_CROSS_EXAMINATION_20261027.md). Confirmed report deficit: full learning/adaptation curve. Confirmed paper placeholder: actual contribution statement. Course DQN/PPO verification and Kaggle class nomination remain open, not proved absent. No class leaderboard marks assigned. No source/experiment/paper rewrite or submission was performed.
+
+
+## Judicial readiness checkpoint — 2026-10-27
+[Final judicial assessment](JUDICIAL_ASSESSMENT_20261027.md) rates the **non-leaderboard** submission provisionally 55/90 (plausible 42–73/90; not official marks). **Leaderboard 10 remains unscored** pending nominated eligible class rank and authenticated Kaggle entry. Original six-arm source and 108 episode records: unverified. Learning/adaptation curves: confirmed incomplete. Actual contribution statement: confirmed unfinished in manuscript. Paper Track, Moodle, Kaggle external platform records: not independently checked. No paper/research modifications or platform submissions occurred in the audit.
