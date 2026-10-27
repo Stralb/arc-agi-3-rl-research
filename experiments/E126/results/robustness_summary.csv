@@ -1,0 +1,5 @@
+policy_seed,native_seed,baseline_levels,E126_levels,delta_levels,baseline_sdk_mean,E126_sdk_mean,delta_sdk_mean,gained_families,lost_families,different_initial_frames_vs_seed47
+79,48,15,16,1,2.1037380258,2.2386134068,0.134875381,s5i5,,0
+80,49,15,15,0,2.0899700737,2.1275022957,0.037532222,,,0
+81,50,15,15,0,2.0899700737,2.1231613657,0.0331912921,,,0
+82,51,15,16,1,2.1013204775,2.2303089085,0.128988431,s5i5,,0
