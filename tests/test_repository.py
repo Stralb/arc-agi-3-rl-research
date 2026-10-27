@@ -1,7 +1,7 @@
-"""Standard-library tests for the public, non-privileged repository subset."""
+"""Offline tests for the lecturer-facing ARC-AGI-3 repository."""
 from pathlib import Path
-import csv
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -9,66 +9,51 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 
-class PublishedRepoTests(unittest.TestCase):
-    def test_offline_integrity(self):
-        result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts/verify_repository.py")],
-            cwd=ROOT, capture_output=True, text=True
-        )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+def run(relative):
+    return subprocess.run([sys.executable, str(ROOT / relative)], cwd=ROOT,
+                          capture_output=True, text=True)
 
-    def test_public_game_count(self):
-        with (ROOT / "data/outputs/benchmarks/n114_public25_matrix.csv").open(newline="") as f:
-            rows = list(csv.DictReader(f))
-        self.assertEqual(len(rows), 25)
-        self.assertEqual(sum(int(r["l2"]) for r in rows), 1)
-        self.assertEqual(sum(int(r["l3plus"]) for r in rows), 0)
+class RepositoryTests(unittest.TestCase):
+    def test_original_baseline_evidence(self):
+        p = run("scripts/verify_repository.py")
+        self.assertEqual(p.returncode, 0, p.stdout + p.stderr)
 
-    def test_frozen_baseline_is_separate(self):
-        base = ROOT / "src/baselines/frozen_n093.py"
-        candidate = ROOT / "src/best_public_agent.py"
-        self.assertTrue(base.exists() and candidate.exists())
-        self.assertNotEqual(base.read_bytes(), candidate.read_bytes())
+    def test_e126_release(self):
+        p = run("scripts/verify_e126_release.py")
+        self.assertEqual(p.returncode, 0, p.stdout + p.stderr)
 
-    def test_notebooks_parse(self):
-        for name in ("frozen_n093_submission.ipynb", "local_effect_best_public.ipynb"):
-            data = json.loads((ROOT / "notebooks" / name).read_text())
-            self.assertEqual(data["nbformat"], 4)
+    def test_summary_mentions_all_versions(self):
+        p = run("scripts/summarize_results.py")
+        self.assertEqual(p.returncode, 0, p.stdout + p.stderr)
+        for term in ("N093:", "N117:", "E126 seed 76:", "hybrid=16", "not private Kaggle"):
+            self.assertIn(term, p.stdout)
 
-    def test_local_markdown_links_resolve(self):
-        import re
+    def test_readme_and_results_links(self):
         for md in ROOT.rglob("*.md"):
-            source = md.read_text(encoding="utf-8")
-            for target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", source):
-                relative = target.split("#", 1)[0].split("?", 1)[0].strip("<>")
-                if not relative or relative.startswith(("http://", "https://", "mailto:", "/", "#")):
+            for link in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", md.read_text(encoding="utf-8")):
+                target = link.split("#", 1)[0].split("?", 1)[0].strip("<>")
+                if not target or target.startswith(("http://", "https://", "mailto:", "/", "#")):
                     continue
-                resolved = (md.parent / relative).resolve()
-                self.assertTrue(resolved.is_relative_to(ROOT.resolve()), f"Outside repository: {md}: {target}")
-                self.assertTrue(resolved.exists(), f"Broken relative link: {md}: {target}")
+                destination = (md.parent / target).resolve()
+                self.assertTrue(destination.is_relative_to(ROOT.resolve()), target)
+                self.assertTrue(destination.exists(), f"Broken link: {md.relative_to(ROOT)} -> {target}")
 
-    def test_e126_release_integrity(self):
-        result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts/verify_e126_release.py")],
-            cwd=ROOT, capture_output=True, text=True
-        )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    def test_notebooks(self):
+        notebooks = list((ROOT / "notebooks").glob("*.ipynb"))
+        self.assertEqual(len(notebooks), 1)
+        nb = json.loads(notebooks[0].read_text(encoding="utf-8"))
+        self.assertEqual(nb["nbformat"], 4)
 
-    def test_summary_includes_the_versioned_e126_result(self):
-        result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts/summarize_results.py")],
-            cwd=ROOT, capture_output=True, text=True
-        )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("E126 policy seed 76:", result.stdout)
-        self.assertIn("hybrid=16 levels", result.stdout)
+    def test_plots(self):
+        images = list((ROOT / "results/plots").glob("*.svg"))
+        self.assertGreaterEqual(len(images), 4)
+        for file in images:
+            self.assertTrue(ET.parse(file).getroot().tag.endswith("svg"), str(file))
 
-    def test_svg_plots_parse(self):
-        plots = sorted((ROOT / "data/outputs/plots").glob("*.svg"))
-        self.assertGreaterEqual(len(plots), 5)
-        for path in plots:
-            root = ET.parse(path).getroot()
-            self.assertTrue(root.tag.endswith("svg"), path)
+    def test_archive_not_cluttering_main(self):
+        for historical in ("experiments", "reports", "data", "docs"):
+            self.assertFalse((ROOT / historical).exists(), historical)
+        self.assertIn("archive/full-research-2026-10-27", (ROOT / "README.md").read_text())
 
 if __name__ == "__main__":
     unittest.main()

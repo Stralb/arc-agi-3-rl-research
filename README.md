@@ -1,62 +1,55 @@
-# ARC-AGI-3 — Interactive Reinforcement Learning Research
+# Learning to explore ARC-AGI-3 games
 
-This repository preserves a **public, curated research snapshot** of agents for ARC-AGI-3 interactive games. It contains the frozen B1/N093 optimistic Bellman + PUCT control, the local action-effect extension, the E126 click-exploration candidate, verified historical development summaries and negative results. Results concern **25 previously exposed public games**, not unseen-game generalization or an official Kaggle score.
+This is our reinforcement learning research project for ARC-AGI-3. The benchmark has interactive games rather than puzzles with a known target grid. The agent sees a 64×64 frame, chooses a legal action, and has to work out which actions are useful. We experimented with ways to improve exploration when rewards are sparse and the rules are unknown.
 
-## Verify the published snapshot
+The code below is the part of the project we would actually want someone marking our work to read. Older trials, failed ideas, detailed traces, and the original research notes are preserved in the [full research archive](https://github.com/Stralb/arc-agi-3-rl-research/tree/archive/full-research-2026-10-27).
 
-**Python 3.11+**; these verification commands need only the Python standard library.
+## Agents we compared
+
+| Version | What changed | Completed levels on 25 public games |
+|---|---|---:|
+| N093 | Optimistic Bellman/Q updates and a PUCT-style action selector | 14 |
+| N117 | Adds local action-effect memory to the same controller | 15 |
+| E126 | Adds click feedback and a pretrained action-effect model in selected scenes | 16 |
+
+These are **historical local SDK results**, not Kaggle leaderboard scores. E126 reached 16 levels with each of three tested policy seeds; N117's matched results were 15, 14 and 15. All 25 games were used during development, so we cannot treat these as independent evidence of generalisation. No agent completed Level 3. The E126 notebook is a **research candidate, not a verified Kaggle submission**.
+
+The action-effect network is an auxiliary predictor, **not a second independent RL algorithm**. The assignment also asks for another learning algorithm and two tested improvements per algorithm; this repository does not yet establish that requirement.
+
+## Finding your way around
+
+| Location | Contents |
+|---|---|
+| [src/](src/) | Frozen N093 and N117 sources, readable local-effect policy, and the generated E126 agent |
+| [notebooks/](notebooks/) | One E126 Kaggle-format candidate notebook |
+| [release/e126/](release/e126/) | Notebook builder, action-effect extension and release checksums |
+| [assets/e126/](assets/e126/) | Pretrained effect-model checkpoint |
+| [RESULTS.md](RESULTS.md) | Comparison, ablations, failures, evaluation limitations |
+| [results/](results/) | Per-game CSVs and a few figures used in the comparison |
+
+The generated agents are large because they embed model parameters for offline use. We have left their exact bytes alone to avoid breaking release hashes. The earlier Kaggle-format notebooks, additional training code and historical evaluations are available on the archive branch, not deleted.
+
+## What you can run
+
+From the repository root with Python 3.11+:
 
 ```bash
-git clone https://github.com/Stralb/arc-agi-3-rl-research.git
-cd arc-agi-3-rl-research
 python3 scripts/verify_repository.py
+python3 release/e126/build_candidate.py
 python3 scripts/verify_e126_release.py
 python3 -m unittest discover -s tests -v
 python3 scripts/summarize_results.py
 ```
 
-To regenerate the public-result charts (requires a separate analysis environment):
+These commands check the committed evidence and rebuild the E126 notebook **without running any games or requiring the SDK**. For optional charts:
 
 ```bash
 python3 -m pip install -r requirements-analysis.txt
 python3 scripts/generate_plots.py
 ```
 
-## Where to look
+The actual ARC-AGI-3 SDK and original native replay files are not redistributed here. The original N114/N117 runner instructions and source are in the [archived repository](https://github.com/Stralb/arc-agi-3-rl-research/blob/archive/full-research-2026-10-27/docs/REPRODUCIBILITY.md). They require separately authorised game assets. A passing offline test is **not** a fresh gameplay result or a Kaggle rerun.
 
-| What | Location |
-|---|---|
-| Frozen reference agent and experimental local-effect agent | [`src/`](src/README.md) |
-| Kaggle-format source notebooks (no new E126 submission) | [`notebooks/`](notebooks/README.md) |
-| E126 model, generator, controls and public audit | [E126 protocol](experiments/E126/README.md), [findings](reports/E126_SUBMISSION_CANDIDATE.md) |
-| Experimental implementations, ablations and protocols | [`experiments/`](experiments/INDEX.md) |
-| Main findings and negative results | [`reports/RESEARCH_SUMMARY.md`](reports/RESEARCH_SUMMARY.md), [research index](reports/INDEX.md) |
-| Public native benchmark tables and SVG figures | [`data/outputs/`](data/outputs/INDEX.md) |
-| Source archive hashes and unpublished-asset inventory | [provenance](data/provenance/README.md), [coverage](docs/REPOSITORY_COVERAGE.md) |
-| Exact offline/native reproduction boundary | [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) |
-| Assignment deliverables and known gaps | [Submission checklist](docs/SUBMISSION_CHECKLIST.md) |
+## Work still to be submitted
 
-## Observed public-development results
-
-| Frozen / candidate | Level 1 | Level 2 | Level 3+ | Total completed levels |
-|---|---:|---:|---:|---:|
-| Frozen B1 + N093 | 13 | 1 | 0 | **14** |
-| Local effect-memory (N117, seed 76) | 13 | 2 | 0 | **15** |
-| E126 hybrid (seeds 76/77/78) | 14 | 2 | 0 | **16 each seed** |
-
-The N117 gain over N093 is one Level-2 completion on `tu93`. E126 additionally completes `s5i5` Level 1 on seeds 76/77/78; its 16 levels per seed are **public-development results selected after exposure to all 25 games**. Across those seeds, local SDK mean score increases from 2.081484 (matched N117 control) to 2.225399 (+0.143915), but a descriptive game-cluster interval includes zero. These are **not official Kaggle leaderboard scores**. Fewer charged actions can mean earlier `GAME_OVER`, not greater efficiency. All 25 game families influenced research; no independent unseen-game gain is demonstrated.
-
-## Reproducing a native run
-
-The public GitHub tree **does not contain the original game SDK, native frame/trace archives or private competition inputs**. To replay N114/N117, obtain the authorized original SDK archives, install the runtime dependencies in [`requirements-agent.txt`](requirements-agent.txt), and follow the checksum-verified [native staging commands](docs/REPRODUCIBILITY.md). The standard-library checks above validate committed files and arithmetic, **not** a fresh ARC game execution.
-
-The **E126 candidate is now preserved in `main`** as research, alongside the unchanged N117 and N093 controls. The self-contained source and notebook are generated from a frozen pretrained effect checkpoint; the build is checked by committed SHA-256 manifests. It is **not submitted to Kaggle**, has not been verified in the official rerun, and is not an independently generalized agent. Teammate checkpoint redistribution rights must be confirmed before further release.
-
-Build and check E126 offline (Python standard library; the SDK is not needed for packaging):
-
-```bash
-python3 experiments/E126/build_candidate.py
-python3 scripts/verify_e126_release.py
-```
-
-**Submission status:** This repository is a curated research archive, **not the complete Moodle submission**. The final RLC-format report PDF, group contribution statement and externally verified Kaggle/Paper Track identifiers or evidence are not in this tree. The assignment's requirement for two qualifying learning algorithms and two separately evaluated improvements *per algorithm* is not established by these committed studies alone. See the [submission checklist](docs/SUBMISSION_CHECKLIST.md). See [data and licensing boundaries](docs/DATA_AND_LICENSES.md) before sharing additional assets.
+The final RLC-format assignment report, the second qualifying RL algorithm's evaluation, group contributions, and verifiable Kaggle/Paper Track submission evidence are not included in this branch. We have not labelled those as complete. We also need to check redistribution permission for the teammate-trained effect-model checkpoint before any wider release.
