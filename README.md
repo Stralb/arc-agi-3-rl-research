@@ -20,10 +20,9 @@ The action-effect network is an auxiliary predictor, **not a second independent 
 
 | Location | Contents |
 |---|---|
-| [src/](src/) | Frozen N093 and N117 sources, readable local-effect policy, and the generated E126 agent |
-| [notebooks/](notebooks/) | One E126 Kaggle-format candidate notebook |
-| [release/e126/](release/e126/) | Notebook builder, action-effect extension and release checksums |
-| [assets/e126/](assets/e126/) | Pretrained effect-model checkpoint |
+| [src/](src/) | N093, N117 and E126 agent sources, including the readable local-effect policy |
+| [E126_Kaggle_Candidate.ipynb](E126_Kaggle_Candidate.ipynb) | E126 Kaggle-format candidate notebook |
+| [release/](release/) | Notebook builder, extension, checkpoint and checksums |
 | [RESULTS.md](RESULTS.md) | Comparison, ablations, failures, evaluation limitations |
 | [results/](results/) | Per-game CSVs and a few figures used in the comparison |
 
@@ -35,9 +34,9 @@ From the repository root with Python 3.11+:
 
 ```bash
 python3 scripts/verify_repository.py
-python3 release/e126/build_candidate.py
+python3 release/build_candidate.py
 python3 scripts/verify_e126_release.py
-python3 -m unittest discover -s tests -v
+python3 -m unittest test_repository -v
 python3 scripts/summarize_results.py
 ```
 

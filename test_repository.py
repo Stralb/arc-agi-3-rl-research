@@ -7,7 +7,7 @@ import sys
 import unittest
 import xml.etree.ElementTree as ET
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 
 def run(relative):
     return subprocess.run([sys.executable, str(ROOT / relative)], cwd=ROOT,
@@ -39,7 +39,7 @@ class RepositoryTests(unittest.TestCase):
                 self.assertTrue(destination.exists(), f"Broken link: {md.relative_to(ROOT)} -> {target}")
 
     def test_notebooks(self):
-        notebooks = list((ROOT / "notebooks").glob("*.ipynb"))
+        notebooks = list(ROOT.glob("*.ipynb"))
         self.assertEqual(len(notebooks), 1)
         nb = json.loads(notebooks[0].read_text(encoding="utf-8"))
         self.assertEqual(nb["nbformat"], 4)
@@ -51,7 +51,8 @@ class RepositoryTests(unittest.TestCase):
             self.assertTrue(ET.parse(file).getroot().tag.endswith("svg"), str(file))
 
     def test_archive_not_cluttering_main(self):
-        for historical in ("experiments", "reports", "data", "docs"):
+        for historical in ("experiments", "reports", "data", "docs", "assets", "notebooks", "tests",
+                           "src/algorithms", "src/baselines", "release/e126"):
             self.assertFalse((ROOT / historical).exists(), historical)
         self.assertIn("archive/full-research-2026-10-27", (ROOT / "README.md").read_text())
 
