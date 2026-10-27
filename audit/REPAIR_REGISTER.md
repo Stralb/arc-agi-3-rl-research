@@ -108,3 +108,7 @@ Acceptance and per-task source/verification requirements are in the plan. Existi
 | RP-13/14 | NOT STARTED (paper remains unchanged) | Generated figures are candidates only; no E128 LaTeX source or final manuscript rewrite. |
 
 No task was marked fully closed merely on paper-derived data. All original experimental assets preserved; no SDK game actions, new training, or Kaggle submissions performed.
+
+
+## Eight-page scientific architecture (2026-10-27)
+The paper redesign architecture is fixed **in outline only** at [REPORT_ARCHITECTURE_20261027.md](REPORT_ARCHITECTURE_20261027.md), without editing manuscript or changing data. Recommended selection: hybrid with mandated DQN/PPO baseline→I1→I2 evidence before distinct N118→E126 extension. Proposed page equivalent: 0.60 title/abstract; 0.65 introduction; 0.55 task/prior work; 0.90 baselines; 1.05 interventions; 0.65 protocol; 1.80 matched results/ablations; 0.95 extension; 0.85 limitations/conclusion = 8.00. Candidate main figures: 108-cell course outcomes (reported-only), compact E126 score/control decomposition (verified saved arithmetic); reserve actual curves **only if source-valid**. RP-13 **PLANNING COMPLETED**, RP-14 **OPEN** for genuine E128 LaTeX/RLC rebuild/figure provenance; RP-01/04/06/07 blockers remain OPEN. Do not infer grade improvement merely from architecture.
