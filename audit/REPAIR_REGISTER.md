@@ -26,3 +26,12 @@ See [full 44-row matrix](REQUIREMENT_TO_EVIDENCE_MATRIX.md). No scientific resul
 - RR-017 [P0, OPEN]: Resolve author contributions and Moodle/Paper Track/Kaggle nomination receipts. Leaderboard 10 cannot be scored without eligible class rank.
 - RR-018 [P1, OPEN]: Verify PPO masked log-prob and action legality; verify DQN-I2 conditional-stall policy is substantive rather than pure hyperparameter tuning; disclose frozen effect-model pretraining.
 - RR-019 [P1, OPEN]: Reconcile E126 server receipt/version *chronologically*: current E128 PDF postdates public main commit, so contradicting status descriptions do not themselves prove a false claim.
+
+## Forensic-code repair update — 2026-10-27
+Linked full audit: [FORENSIC_CODE_AND_RESULTS_AUDIT.md](FORENSIC_CODE_AND_RESULTS_AUDIT.md). No source/report rewriting; no native training.
+- RR-020 [P0, OPEN]: Source-level DQN-I2 review. Verify threshold, counter reset, actual action changes vs I1, exploration scheduling and whether the intervention is substantive beyond epsilon tuning. **Current conclusion conditional/borderline, not proven.**
+- RR-021 [P0, OPEN]: PPO-I2 actor/rollout mask audit. Ensure mask consistency between old sampling and new-policy logprob, click-type factorisation, entropy, GAE, terminal/truncation and correct optimizer steps.
+- RR-022 [P0, OPEN]: Inspect original coursework run files and explain DQN-I1 361 updates vs simple 360 expectation; investigate all arms' exact 3,072 calls versus possible early GAME_OVER/reset. Recompute real runtime and native score from per-run records.
+- RR-023 [P1, DONE static check only]: Confirmed N093→N117→E126 source-prefix inheritance, E126 no PPO gradients, frozen CNN and sparse gate. Native execution remains unverified.
+- RR-024 [P1, DONE recorded-data arithmetic only]: Independently reaggregated 1,125 E126 records and 36 paired-difference rows; no unexpected arithmetic discrepancies found. Original frame-hash replay remains open.
+- RR-025 [P1, OPEN]: Verify E126 `s5i5` first divergent same-frame action 3 and complete 8,632-action trace against owner-held `E124_E125_E126_FULL_NATIVE_EVIDENCE.zip`.
