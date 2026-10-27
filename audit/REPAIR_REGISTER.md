@@ -131,3 +131,20 @@ The paper redesign architecture is fixed **in outline only** at [REPORT_ARCHITEC
 - **RP-14 PARTIALLY COMPLETED:** Built review source + two reproducible figures under public RLJ/RLC 2026.1 style copy; disabled cover. `latexmk` compiled seven total pages; all seven pages rendered and checked; E126 table/figure were corrected to stay in their own section; **33/33 automated verification assertions passed**. Extracted LaTeX/PDF text was identical after a clean-directory reconstruction, also 33/33. **Exact original E128 .tex and byte-identical lecturer official style are still unavailable; do not claim direct source edit or certified template parity.**
 - **RP-05/06 remain PARTIAL/OPEN:** E126 saved-data arithmetic correctly supported (44→48 levels, 75 matched pairs, positive score cells only `lf52`/`s5i5`). Coursework numbers and per-cell outcomes remain *reported only* from E128, not native replay. No genuine budget-indexed learner effectiveness curve was recovered; manuscript explicitly admits it.
 - **RP-03/04/07/08/12 remain OPEN:** PPO mask log probabilities and DQN-I2 substantive code unverified; all-in pretrained costs/permission unverified; official Kaggle ID57690887/score0.33, author contributions, Paper Track and Moodle receipts unverified. No results or submitted artifacts were overwritten.
+
+
+## E130 second review applied corrections (2026-10-27)
+Details, evidence and hearing: [SECOND_ADVERSARIAL_REVIEW_E130_20261027.md](SECOND_ADVERSARIAL_REVIEW_E130_20261027.md). **Review source/PDF package actually compiled, visually checked all eight pages, 41/41 QA passed, clean ZIP rebuild text-identical, saved E126 bootstrap script executed.** No original research data or official submissions modified.
+| Repair | Status | Verified action / acceptance remaining |
+|---|---|---|
+| RP-13 report architecture | COMPLETE in review copy | Core DQN/PPO results central; separate E126 study retained. |
+| RP-14 publication source/layout | PARTIALLY COMPLETE | E130 proper Table1/figure1 order, two legible figures, eight total/seven main pages, no LaTeX errors; exact **official** 2026 style hash still unverified. |
+| E130-F1 E129 caption self-reference | CLOSED | Removed opaque “E128 Table1/Fig2” source from publication caption while retaining reported-only data tier. |
+| E130-F2 reported-vs-measured claims | CLOSED at language level | Removed unverified assertion that background-click failures were counted; PPO update described as reported; scorer version absence disclosed. |
+| E130-F3 historic mechanism controls | CLOSED at paper-evidence level | Restored N118 corrupted-history Brier 0.162504 and E126 s5i5 step3 divergence with noncausal interpretation. |
+| E130-F4 saved-statistic reproducibility | CLOSED for offline data | `scripts/verify_statistics.py` reproduces 75 matched pairs, 45 controls, 20k family CI from derived source-tagged CSV, **not** SDK replay. |
+| RP-01/02/03/04/05 original coursework and DQN/PPO correctness | OPEN | No original neural training/checkpoints, 108 SDK run logs, mask probability or I2 substantive evidence recovered. |
+| RP-06 learning or adaptation curve | OPEN confirmed requirement gap | No genuine budget-indexed neural learning/adaptation series. |
+| RP-07/08 external submission, member contribution | OPEN | Kaggle class nomination and ID57690887 receipt, Moodle/Paper Track, real author roles not verified. |
+| RP-12 pretrained components | OPEN | Full DQN offline training cost and peer CNN licence/permissions unknown. |
+The judicial 55/90 provisional non-leaderboard assessment is **unchanged**; leaderboard 10 unknown. E130 is review-ready, not certified final submission.
