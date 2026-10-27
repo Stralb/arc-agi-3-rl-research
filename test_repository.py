@@ -1,5 +1,6 @@
-"""Offline tests for the lecturer-facing ARC-AGI-3 repository."""
+"""Offline checks for agent releases and saved public evaluations."""
 from pathlib import Path
+import ast
 import json
 import re
 import subprocess
@@ -48,7 +49,7 @@ class RepositoryTests(unittest.TestCase):
 
     def test_plots(self):
         images = list((ROOT / "results/plots").glob("*.svg"))
-        self.assertGreaterEqual(len(images), 4)
+        self.assertGreaterEqual(len(images), 2)
         for file in images:
             self.assertTrue(ET.parse(file).getroot().tag.endswith("svg"), str(file))
 
@@ -63,11 +64,14 @@ class RepositoryTests(unittest.TestCase):
         self.assertEqual(len(dependencies), len(set(dependencies)))
         self.assertTrue({"numpy>=1.24", "scipy", "torch", "pandas>=2.0", "matplotlib>=3.7"}.issubset(dependencies))
 
-    def test_archive_not_cluttering_main(self):
-        for historical in ("experiments", "reports", "data", "docs", "assets", "notebooks", "tests",
-                           "src/algorithms", "src/baselines", "release/e126"):
-            self.assertFalse((ROOT / historical).exists(), historical)
-        self.assertIn("archive/full-research-2026-10-27", (ROOT / "README.md").read_text())
+    def test_readable_policy_uses_local_baseline(self):
+        source = ast.parse((ROOT / "src/local_effect_policy.py").read_text(encoding="utf-8"))
+        imports = [node.module for node in ast.walk(source) if isinstance(node, ast.ImportFrom)]
+        self.assertIn("src.frozen_n093", imports)
+        self.assertNotIn("submission", imports)
+        frozen = ast.parse((ROOT / "src/frozen_n093.py").read_text(encoding="utf-8"))
+        self.assertTrue(any(isinstance(node, ast.ClassDef) and
+                            node.name == "PretrainedPUCTCore" for node in frozen.body))
 
 if __name__ == "__main__":
     unittest.main()

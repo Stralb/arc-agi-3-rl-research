@@ -48,9 +48,12 @@ def verify():
     assert int(arms["local"]["L2"]) == 2
     assert int(arms["local_any_pixel"]["L2"]) == 1
     assert int(arms["local_shuffled"]["L2"]) == 1
-    assert len(list((ROOT / "results/plots").glob("*.svg"))) == 4
-    for svg in (ROOT / "results/plots").glob("*.svg"):
-        assert ET.parse(svg).getroot().tag.endswith("svg"), svg
+    figures = [
+        ROOT / "results/plots/level_completions.svg",
+        ROOT / "results/plots/family_completion_matrix.svg",
+    ]
+    for svg in figures:
+        assert svg.is_file() and ET.parse(svg).getroot().tag.endswith("svg"), svg
 
     notebook = json.loads((ROOT / "E126_Kaggle_Candidate.ipynb").read_text())
     assert notebook["nbformat"] == 4
