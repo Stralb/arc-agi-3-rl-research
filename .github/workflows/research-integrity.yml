@@ -1,23 +1,27 @@
-name: research-integrity
+name: repository-checks
 on:
   push:
   pull_request:
 jobs:
-  offline-verify:
+  offline-verification:
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - name: Verify published source and public-result arithmetic
+      - name: Verify frozen agents and public benchmark results
         run: python3 scripts/verify_repository.py
-      - name: Rebuild E126 candidate deterministically (no network/SDK)
-        run: python3 experiments/E126/build_candidate.py
-      - name: Verify E126 hashes, notebook and per-seed public arithmetic
+      - name: Rebuild the E126 agent and notebook
+        run: python3 release/e126/build_candidate.py
+      - name: Verify checkpoint, notebook and per-game E126 results
         run: python3 scripts/verify_e126_release.py
-      - name: Run offline regression tests
+      - name: Run regression tests
         run: python3 -m unittest discover -s tests -v
-      - name: Check Python syntax without executing native SDK
-        run: python3 -m compileall -q src scripts experiments tests
-      - name: Summarize published result tables
+      - name: Check source syntax
+        run: python3 -m compileall -q src scripts release tests
+      - name: Summarize saved results
         run: python3 scripts/summarize_results.py
+      - name: Install chart dependencies
+        run: python3 -m pip install -r requirements-analysis.txt
+      - name: Regenerate figures from saved results
+        run: python3 scripts/generate_plots.py
