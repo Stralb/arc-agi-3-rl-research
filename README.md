@@ -70,3 +70,9 @@ These commands verify the saved results, source hashes and notebook packaging. T
 ## Evaluation scope
 
 All 25 game families were available during development, so these results are public-development evaluations rather than independent tests on unseen games. Some policy seeds also produced identical starting frames. The SDK scores reported here are local evaluation metrics, not official Kaggle leaderboard scores.
+
+## Original neural DQN/PPO coursework source
+
+The [neural coursework source](neural_coursework/) preserves the original Wits cluster Double DQN and PPO baseline learners, a selected structured DQN variant with five cross-fold representation checkpoints, its tested native-action adapter/runner, and [the earlier DQN component-ablation study](neural_coursework/earlier_dqn_component_study/). The repository includes the original source, configurations, tests and source-scoped reproducing notes. A cluster virtual-environment check on 27 October 2026 passed 39 tests (4 skipped), including PPO joint masked log-probability verification and loading the selected DQN effect prior.
+
+These artifacts do **not** establish that the full later four-game, seven-arm coursework implementation and all of its DQN/PPO improvement-specific native trajectories are present; the exact later PPO-I1/PPO-I2 and DQN-I2 implementation provenance remains unresolved. See [scope and reproduction limits](neural_coursework/README.md) before making historical replay or Kaggle-submission claims.
