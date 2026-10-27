@@ -40,3 +40,12 @@ The assignment was re-read in full, including restrictions, official scoring, qu
 - Leaderboard: official public score of nominated eligible class-team code submission by deadline; `10*(N-r)/(N-1)` for N>1; all tied get 10; missing/invalid 0; valid zero-score remains eligible. **Unknown, not presumed zero.**
 - RLC 2026 official template / disabled cover / unchanged fonts,margins,spacing; `Kaggle-team-name.zip` PDF+matching notebook+evidence+team roles; Paper Track writeup link and saved text; no credentials.
 - E128 paper is available; named E127 PDF unavailable in inspected user attachments. No direct version comparison asserted.
+
+## Forensic source-status update — 2026-10-27
+Read [FORENSIC_CODE_AND_RESULTS_AUDIT.md](FORENSIC_CODE_AND_RESULTS_AUDIT.md) for 30 claim-specific checks.
+- Six-arm DQN/PPO source and per-episode gradient logs: **UNVERIFIED**; do not count N093/N117/E126 as PPO.
+- DQN I2 substantive-improvement qualification: **OPEN** pending actual code; current described conditional epsilon escalation is borderline.
+- PPO I2 masked-ratio mathematical correctness: **OPEN** pending actual rollout implementation.
+- Exact 3,072 recorded SDK calls per arm, DQN-I1 361 vs expected simple schedule 360: **OPEN** reconciliation; manuscript arithmetic alone passes.
+- E126 28 changed trajectories, 6 score-gaining pairs, 4 levels, 8,632 actions and reported mean SDK gain: **VERIFIED saved-table arithmetic**; native replay, hidden generalisation and official Kaggle score remain unverified.
+- Kaggle platform receipt for E126 ID57690887: **UNVERIFIED**; later paper and earlier not-submitted manifest disagree but may reflect different timestamps.
