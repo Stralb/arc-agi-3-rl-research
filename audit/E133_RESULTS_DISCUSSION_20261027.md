@@ -1,0 +1,20 @@
+# E133 Coursework Results and Discussion Revision — 27 October 2026
+
+**Deliverables generated in current conversation:** `ARC_AGI3_E133_Revised_Research_Paper.pdf`, `ARC_AGI3_E133_Revised_LaTeX.tex`, and `ARC_AGI3_E133_Results_Discussion_Project.zip`. The original E132/E129 versions and all source experiment records remain unmodified.
+
+**Scientific edits actually implemented in source:**
+- Explains trainable DQN Q weights, replay, Double-DQN target, target copy, epsilon-greedy/structured actions and frozen prior; PPO trainable actor/critic, on-policy 64-step rollouts, GAE, PPO clipped minibatches, entropy, novelty shaping and masked action support.
+- New Table 1 covers all seven coursework arms, native levels, 12-run denominator, failed-run cells, local SDK, known first-native event actions, 3,072 charged calls, optimizer minibatches and in-run walltime; source is contemporary E128 reported results rather than original 108 raw SDK replays.
+- Staged DQN/PPO interventions now carry limitations, hypothesis, implemented difference, result and inference. DQN-I2 retained honestly as conditional epsilon schedule, without relabelling an unexecuted event-repeat option.
+- Recovered earlier **E012 distinct DQN development ablation** from 25 September Wits cluster console report: 75 game-run observations each arm and 600-action upper budget, progress-by-600 full dueling+D14 0.160, no-D14 0.040, no-dueling 0.120, plain DDQN 0.053. This is motivation for final I1 bundle, **not** independent same-protocol component attribution within E128's 4-game/256-action panel. The contemporaneous October 20 plan mentions an event-terminated repeat option only as future work; no verified implementation with E128 I2 outcomes was found. Source and distinctions are in `DEVELOPMENT_ABLATION_CONTEXT.md`.
+- Direct final DQN-I2 / PPO-I2 comparison covers game families, first native rewards, nonwinning cells, actions, in-run time, optimizer updates, reward semantics, offline pretraining and lack of held-out transfer.
+- Expanded named **What Did Not Work?** subsection and Table 3 with four genuine course event-level outcomes; recorded action/frame identities are unavailable and **not fabricated**.
+- Retained Figures A/B/C, identical 0–256 axes: reconstructed within-run native attainment, **not** genuine independently evaluated checkpoint-learning curves; E126 preserved as separate source-verified empirical Bellman extension.
+
+**Executed QA and source scope:**
+- `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`: **SUCCESS**. PDF **9 total physical pages**; main material ends on physical page 8, bibliography starts on page 8 and continues page 9, so all main material is within the 8-page limit. Cover disabled; public 2026.1 RLJ style copy. Exact official lecturer template identity still unverified.
+- Rendered **all nine pages** at 145 dpi and visually inspected montage, Table 1 on page 3, Table 3 on page 7, Figures A/B/C and E126 graphic. No overfull boxes, missing citations or LaTeX errors in final log.
+- Source-derived native curve checks **45/45 PASS**, new dataset/citation/figure/manuscript QA **61/61 PASS**. Reproduced from a clean ZIP extraction: plot regeneration, 45/45, LaTeX compile, 61/61, **identical extracted PDF text**. ZIP integrity checked.
+- SHA-256 PDF `a622db0d09a23d3dacee84b3c82b9a39ab259c4bb1a1a80af1a2b977364733f4`; LaTeX `c56e6f306eb8e5cb37158077d354270287aa79e37072c81f1365de35e06c2681`; ZIP `8cb11b2ca54daf77ec73c58bc52c1c50be9d198280930339e899e81ee5999b87`.
+
+**Unresolved in actual coursework evidence:** Original six-arm trainable DQN/PPO source, 108 raw SDK action logs/checkpoints, independently evaluated learning/adaptation curves, mathematical PPO mask ratio verification, DQN-I2 rubric substantive status, original SDK scorer version, offline encoder training costs and rights, submission receipts/author roles. E012 historical report does **not** close same-protocol causal attribution or replace I2. No new training, cluster SLURM job, or official platform submission claimed.
