@@ -1,0 +1,61 @@
+{
+  "protocol": "PREDECLARED_POLICY_NATIVE_PAIRS_79_48_TO_82_51",
+  "source_sha256": "84f27a2589575558ddb85dff2539f68d1937c6dc1a048cb3b133f6ae7005178c",
+  "all_games_previously_exposed": true,
+  "no_tuning_after_result": true,
+  "results": [
+    {
+      "policy_seed": 79,
+      "native_seed": 48,
+      "baseline_levels": 15,
+      "E126_levels": 16,
+      "delta_levels": 1,
+      "baseline_sdk_mean": 2.1037380258,
+      "E126_sdk_mean": 2.2386134068,
+      "delta_sdk_mean": 0.134875381,
+      "gained_families": "s5i5",
+      "lost_families": "",
+      "different_initial_frames_vs_seed47": 0
+    },
+    {
+      "policy_seed": 80,
+      "native_seed": 49,
+      "baseline_levels": 15,
+      "E126_levels": 15,
+      "delta_levels": 0,
+      "baseline_sdk_mean": 2.0899700737,
+      "E126_sdk_mean": 2.1275022957,
+      "delta_sdk_mean": 0.037532222,
+      "gained_families": "",
+      "lost_families": "",
+      "different_initial_frames_vs_seed47": 0
+    },
+    {
+      "policy_seed": 81,
+      "native_seed": 50,
+      "baseline_levels": 15,
+      "E126_levels": 15,
+      "delta_levels": 0,
+      "baseline_sdk_mean": 2.0899700737,
+      "E126_sdk_mean": 2.1231613657,
+      "delta_sdk_mean": 0.0331912921,
+      "gained_families": "",
+      "lost_families": "",
+      "different_initial_frames_vs_seed47": 0
+    },
+    {
+      "policy_seed": 82,
+      "native_seed": 51,
+      "baseline_levels": 15,
+      "E126_levels": 16,
+      "delta_levels": 1,
+      "baseline_sdk_mean": 2.1013204775,
+      "E126_sdk_mean": 2.2303089085,
+      "delta_sdk_mean": 0.128988431,
+      "gained_families": "s5i5",
+      "lost_families": "",
+      "different_initial_frames_vs_seed47": 0
+    }
+  ],
+  "Kaggle_submission_count": 0
+}

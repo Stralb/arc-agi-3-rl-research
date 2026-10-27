@@ -1,8 +1,13 @@
-# Agent sources
+# Agent implementations
 
-- [`best_public_agent.py`](best_public_agent.py): the **best measured public-development result**, with 13 L1, 2 L2 and 0 L3+ completions across 25 historically exposed native SDK games. This single-file entry point embeds the experimental local effect-memory action selector and pretrained prior. It is **not established to generalize to hidden games**.
-- [`baselines/frozen_n093.py`](baselines/frozen_n093.py): immutable B1 tabular RL + pretrained N093 PUCT conservative control, with 13 L1, 1 L2 and 0 L3+ public completions.
+| Agent | Files | Evidence boundary |
+|---|---|---|
+| Frozen B1/N093 | [source](baselines/frozen_n093.py), [notebook](../notebooks/frozen_n093_submission.ipynb) | Immutable 14-level historical public control |
+| N117 local effect-memory | [source](best_public_agent.py), [notebook](../notebooks/local_effect_best_public.ipynb) | 15 levels on historically exposed public games; not independent generalization |
+| E126 hybrid | [source](e126_submission_agent.py), [notebook](../notebooks/E126_Kaggle_Candidate.ipynb) | 16 levels for each of three tested policy seeds on exposed games; unsubmitted candidate |
 
-The original [modular local-effect policy](algorithms/local_effect_policy.py) is now restored **byte-for-byte** from the archived experiment. The self-contained agent above remains the preferred single-file deployment entry point; the modular policy imports the original N093 core for research ablations.
+The self-contained submissions deliberately embed frozen components and pretrained weights for offline Kaggle use. Duplication in these generated release files protects exact reproducibility and should **not** be removed by a generic refactor. N117's original modular policy lives at [algorithms/local_effect_policy.py](algorithms/local_effect_policy.py), identical to the archived [experiment copy](../experiments/N117/src/policy.py).
 
-The original and experimental [Kaggle-format notebooks](../notebooks/README.md) remain separate. The 14/15 level counts are not official Kaggle scores or human-normalized RHAE. No native Level-3 success was demonstrated.
+**Editable E126 source of record:** [generator](../experiments/E126/build_candidate.py), [extension template](../experiments/E126/e126_template.py), [manifest](../experiments/E126/manifest.json), and [frozen checkpoint](../assets/e126/effect_prior_s11.pt). Change those only with a new version and native evidence; do not edit the generated agent or notebook without regenerating and verifying hashes.
+
+All native performance figures are previously recorded public SDK outcomes, not official Kaggle/private scores. Source/asset redistribution rights remain subject to review.

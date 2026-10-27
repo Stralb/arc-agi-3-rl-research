@@ -11,3 +11,5 @@ These SVG figures were generated from archived native experiments discussed in t
 - **07**: Level-2 failures by native termination type.
 
 All 25 games are historically exposed. These figures are **not independent-generalization or official leaderboard evidence**. Original data are under `data/outputs/benchmarks/` and `data/outputs/experiments/`.
+
+The optional `python3 scripts/generate_plots.py` command (requires `requirements-analysis.txt`) also produces `recomputed_e126_seed_levels.svg` and PNG, comparing the preserved N117 and E126 public SDK level counts by policy seed. Generated files are not new native evaluation evidence.

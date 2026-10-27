@@ -11,6 +11,7 @@ This repository is intended as a **curated, auditable public research record**, 
 - Reproducible SVG plots of public outcomes.
 - Original N114 full 25-game native runner and parity verifier, plus N117 local-effect native runner, event-level policy module, replay verifier and test source. Execution requires separately authorized SDK archives and original data.
 - Source-defined constraints, caveats and rollback guidance.
+- E126 Kaggle-format candidate and its self-contained source, teammate effect-model checkpoint, deterministic generator, per-seed public controls and audit summaries. Original detailed E127 episode traces and cluster cache are not fully hosted.
 
 ## Different archival state
 

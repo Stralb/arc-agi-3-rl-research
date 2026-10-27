@@ -4,7 +4,7 @@
 
 This is an interactive environment. The agent observes 64×64 native game frames and legal action menus. Its actions are sent to the native SDK and the only external reward is verified advancement of `levels_completed`. It cannot directly write an arbitrary target grid.
 
-## Best observed outcomes on the 25 previously exposed public games
+## Earlier N093 versus N117 comparison on the 25 exposed public games
 
 | Policy | L1 | L2 | L3+ | Native charged actions | Caveat |
 |---|---:|---:|---:|---:|---|
@@ -32,3 +32,9 @@ The native Level-2 winners are `vc33` (both policies) and `tu93` (local-effect o
 - No current official human-action counts per game are supplied; do not convert raw native completions to RHAE.
 
 **Deployment conclusion:** freeze N093 as the conservative reference; retain the 15-level local-effect variant as the highest observed *public research candidate*, not as an established stronger hidden-game entrant.
+
+## Later E126 click-selection candidate (27 October 2026)
+
+An additional archived public SDK experiment tested the N117 controller plus local click feedback and a separately trained effect-prior CNN in sparse click-only scenes. The E126 hybrid achieved **16 completed levels (14 L1, 2 L2, 0 L3+) in each of three policy seeds**. Corresponding N117 controls achieved 15, 14 and 15. The effect-prior branch newly completed `s5i5` Level 1. The mean local SDK score was 2.225399 versus 2.081484 for the matched control; **this is not an official Kaggle score**.
+
+The gating rule was selected after exposure to the 25 public games and the descriptive game-cluster bootstrap interval includes zero. E126 has **not** been submitted to Kaggle or verified on hidden games. It is a versioned research candidate, not an automatically promoted competition baseline. See [E126 findings](E126_SUBMISSION_CANDIDATE.md) and [audited controls](../experiments/E126/results/E127_AUDIT.md).

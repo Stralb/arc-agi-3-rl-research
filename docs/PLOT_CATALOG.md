@@ -20,3 +20,5 @@ python3 scripts/generate_plots.py
 ```
 
 The recomputed files are written to `data/outputs/plots/recomputed_*.svg` and `*.png`. The plot generator never accesses restricted game binaries or private competition material.
+
+The local plot-generation script additionally builds a per-policy-seed N117 vs E126 comparison as `recomputed_e126_seed_levels.svg` (and PNG) from the committed E126 CSV. It is **not** included among the archived native figures; run the script to regenerate it.

@@ -35,6 +35,34 @@ class PublishedRepoTests(unittest.TestCase):
             data = json.loads((ROOT / "notebooks" / name).read_text())
             self.assertEqual(data["nbformat"], 4)
 
+    def test_local_markdown_links_resolve(self):
+        import re
+        for md in ROOT.rglob("*.md"):
+            source = md.read_text(encoding="utf-8")
+            for target in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", source):
+                relative = target.split("#", 1)[0].split("?", 1)[0].strip("<>")
+                if not relative or relative.startswith(("http://", "https://", "mailto:", "/", "#")):
+                    continue
+                resolved = (md.parent / relative).resolve()
+                self.assertTrue(resolved.is_relative_to(ROOT.resolve()), f"Outside repository: {md}: {target}")
+                self.assertTrue(resolved.exists(), f"Broken relative link: {md}: {target}")
+
+    def test_e126_release_integrity(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/verify_e126_release.py")],
+            cwd=ROOT, capture_output=True, text=True
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_summary_includes_the_versioned_e126_result(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/summarize_results.py")],
+            cwd=ROOT, capture_output=True, text=True
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("E126 policy seed 76:", result.stdout)
+        self.assertIn("hybrid=16 levels", result.stdout)
+
     def test_svg_plots_parse(self):
         plots = sorted((ROOT / "data/outputs/plots").glob("*.svg"))
         self.assertGreaterEqual(len(plots), 5)

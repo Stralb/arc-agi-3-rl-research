@@ -37,3 +37,6 @@ arc-prize-2026-arc-agi-3.zip
 *.pem
 *_credentials*.json
 *_token.txt
+
+# Deterministically generated E126 release artifacts; original committed release is elsewhere
+experiments/E126/build/

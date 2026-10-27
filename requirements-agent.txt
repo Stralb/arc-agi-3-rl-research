@@ -1,3 +1,6 @@
-# Competition runtime is supplied by the official ARC-AGI-3 environment.
-# Do not install a private game engine or infer privileged state.
+# Python 3.11+ runtime imports used by the published agent sources.
+# The official ARC-AGI-3 SDK provides arcengine and agents; obtain it
+# separately under the competition's terms. It is not vendored here.
 numpy>=1.24
+scipy
+torch

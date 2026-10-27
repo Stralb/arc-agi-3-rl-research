@@ -22,3 +22,9 @@ This achieved one additional `tu93` Level-2 completion on a historically exposed
 ## Experimental branches
 
 All other branches under `experiments/` are archived research variants, not default imports, and many require restored original `inputs/` and public SDK runtime. See full findings and original scripts.
+
+## E126: research-only selective click exploration (not submitted)
+
+E126 extends the byte-identical N117 source with (1) observation-based local click-effect and rarity ranking and (2) a separately pretrained action-effect CNN, used only for Level-1 sparse click-only screens (modal colour fraction at least 0.80). Its original Level-2+ controller is unchanged. The pretrained network is an auxiliary **action-effect model**, not an independently demonstrated second RL algorithm.
+
+The archived E126 comparison completed 14 L1, 2 L2 and 0 L3+ on each of three policy seeds (76/77/78), versus N117 baseline 13/12/13 L1 and 2 L2 each. This is a post-hoc public-development improvement, not proof of new-game transfer or an official Kaggle rerun. See [E126 experiment](../experiments/E126/README.md) and [research report](../reports/E126_SUBMISSION_CANDIDATE.md).

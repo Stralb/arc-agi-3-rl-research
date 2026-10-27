@@ -1,0 +1,25 @@
+{
+  "variant": "E126 hybrid_trained",
+  "status": "candidate_not_submitted",
+  "frozen_n117_sha256": "0663845070e47a053076db54243c3445921a06b4bf0908b7b233c263da423bfa",
+  "peer_effect_checkpoint_sha256": "c5882f664b082aa131023ac1ffaebeb771ba7fe181fa909730fe1c641e5978b9",
+  "full_agent_sha256": "84f27a2589575558ddb85dff2539f68d1937c6dc1a048cb3b133f6ae7005178c",
+  "notebook_sha256": "6bbbbc5c4011d5c781e24065e70f8fea731250c07e994980c932fad41ee30b56",
+  "git_blob_sha1_of_frozen_source": "eb6f071c3162a28c902b43c56fce3d89cc8415f3",
+  "policy_seed": 76,
+  "modal_colour_threshold": 0.8,
+  "no_inference_network": true,
+  "public_games": 25,
+  "official_kaggle_submission": false,
+  "local_public_sdk_seed76_to78": [
+    2.2115182587,
+    2.2239424189,
+    2.24073704
+  ],
+  "local_public_sdk_baseline_seed76_to78": [
+    2.0932423408,
+    2.054775023,
+    2.0964346368
+  ],
+  "caveat": "The 80 percent threshold was selected using previously exposed games; no hidden score guarantee."
+}
