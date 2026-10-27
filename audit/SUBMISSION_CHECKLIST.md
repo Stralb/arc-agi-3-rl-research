@@ -87,3 +87,7 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## Manuscript-architecture check (2026-10-27)
 [Proposed layout](REPORT_ARCHITECTURE_20261027.md) budgets exactly eight main-page equivalents and references afterward. It explicitly preserves all mandated coursework sections and locates separate E126 extension. Official RLJ/RLC 2026 template and disabled cover must be verified from **actual compiling source**, not an unrelated general template; do not shrink template fonts/margins. Original six-arm DQN/PPO source, genuine learning curve, author contribution statement, Paper Track, Kaggle server record and Moodle receipts remain open. No report text modified by this architecture plan.
+
+
+## E129 review compilation checkpoint — 27 October 2026
+Reviewed LaTeX/PDF source package created: seven physical pages, two primary figures, two tables, **no cover page**, RLJ/RLC 2026.1 style copy, 33/33 QA checks and independent clean-folder build with identical extracted PDF text. This is **not a certification of actual lecturer official style byte parity** (original E128 .tex and authoritative downloadable style unavailable) or of official submission. The paper openly retains missing neural learning/adaptation curves, unavailable original DQN/PPO 108-run source/logs, unverified DQN-I2/PPO masked updates, author contributions, pretrained rights, and official Kaggle/Paper Track/Moodle receipts. No external upload or model training was carried out.
