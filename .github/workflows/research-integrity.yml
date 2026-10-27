@@ -21,7 +21,7 @@ jobs:
         run: python3 -m compileall -q src scripts release test_repository.py
       - name: Summarize saved results
         run: python3 scripts/summarize_results.py
-      - name: Install dependencies
-        run: python3 -m pip install -r requirements.txt
+      - name: Install plotting packages from requirements.txt
+        run: python3 -m pip install $(grep -E '^(numpy|pandas|matplotlib)' requirements.txt)
       - name: Regenerate figures from saved results
         run: python3 scripts/generate_plots.py
