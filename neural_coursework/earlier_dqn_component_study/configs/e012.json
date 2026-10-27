@@ -1,0 +1,108 @@
+{
+  "experiment_id": "E012-final-dqn-consolidation",
+  "e004_root": "/home-mscluster/astrauss/arc_rl_architecture_e004",
+  "e005d_root": "/home-mscluster/astrauss/arc_rl_exploration_e005d",
+  "e008_root": "/home-mscluster/astrauss/arc_rl_backbone_e008",
+  "e009_root": "/home-mscluster/astrauss/arc_rl_exploration_e009",
+  "e011_root": "/home-mscluster/astrauss/arc_rl_persistence_e011",
+  "venv": "/home-mscluster/astrauss/arc_rl_mechanics_killtest/.venv",
+  "representation": {
+    "id": "E-onehotcnn__T-stack2__A-vector__U-effect",
+    "trainable": false,
+    "progress_context": true,
+    "max_levels": 5
+  },
+  "backbone_defaults": {
+    "learn": true,
+    "n_step": 1,
+    "per": false,
+    "distributional": false
+  },
+  "required_e008_winner_id": "B3_dueling",
+  "required_e009_winner_id": "E9_T1_d14_full",
+  "required_e011_decision": "E011_KEEP_E009_CONTROL",
+  "d14_selector_id": "D14_split_effect_count",
+  "all_public_games": [
+    "ar25", "bp35", "dc22", "ft09", "g50t", "ka59", "lf52", "lp85", "r11l", "s5i5",
+    "sb26", "sk48", "su15", "tn36", "tr87", "tu93", "vc33", "cd82", "ls20", "m0r0",
+    "sp80", "re86", "cn04", "wa30", "sc25"
+  ],
+  "folds": [
+    ["bp35", "sb26", "tu93", "sk48", "r11l"],
+    ["vc33", "tn36", "tr87", "wa30", "s5i5"],
+    ["lf52", "ls20", "su15", "ar25", "sp80"],
+    ["dc22", "re86", "ka59", "lp85", "g50t"],
+    ["sc25", "ft09", "cn04", "cd82", "m0r0"]
+  ],
+  "click_action_id": 6,
+  "click_size": 64,
+  "max_action_id": 7,
+  "reward": {
+    "kind": "high_water_progress",
+    "progress_scale": 1.0,
+    "win_bonus_if_no_progress": 1.0,
+    "death_penalty": 0.0
+  },
+  "training": {
+    "gamma": 0.99,
+    "learning_rate": 0.0001,
+    "batch_size": 8,
+    "replay_capacity": 4096,
+    "warmup_actions": 16,
+    "train_every_actions": 8,
+    "target_update_actions": 80,
+    "gradient_clip_norm": 10.0,
+    "hidden_dim": 128,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.1,
+    "epsilon_decay_actions": 400,
+    "per_alpha": 0.6,
+    "per_beta_start": 0.4,
+    "per_beta_end": 1.0,
+    "per_eps": 0.0001,
+    "c51_atoms": 51,
+    "c51_vmin": 0.0,
+    "c51_vmax": 5.0
+  },
+  "full_system_id": "E12_F_full_dueling_d14",
+  "systems": [
+    {
+      "id": "E12_F_full_dueling_d14",
+      "family": "full",
+      "dueling": true,
+      "exploration_policy": "d14",
+      "structured_probability": 1.0
+    },
+    {
+      "id": "E12_A_no_d14",
+      "family": "ablation_no_d14",
+      "dueling": true,
+      "exploration_policy": "uniform"
+    },
+    {
+      "id": "E12_A_no_dueling",
+      "family": "ablation_no_dueling",
+      "dueling": false,
+      "exploration_policy": "d14",
+      "structured_probability": 1.0
+    },
+    {
+      "id": "E12_A_plain_ddqn",
+      "family": "anchor_plain_ddqn",
+      "dueling": false,
+      "exploration_policy": "uniform"
+    }
+  ],
+  "evaluation": {
+    "folds": [0, 1, 2, 3, 4],
+    "seeds": [5209, 5623, 6043],
+    "budget": 600,
+    "expected_tasks": 60
+  },
+  "selection": {
+    "bootstrap_reps": 5000,
+    "meaningful_p600_margin": 0.0,
+    "meaningful_completion_margin": 0.0,
+    "keep_full_unless_ablation_is_behaviorally_better": true
+  }
+}
