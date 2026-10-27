@@ -1,5 +1,7 @@
 # Reproducing the published ARC-AGI-3 evidence
 
+**Environment:** Python 3.11+ for the published source checks; NumPy, SciPy and PyTorch for native-agent Python imports (see [`requirements-agent.txt`](../requirements-agent.txt)). The official ARC SDK additionally supplies `arcengine` and `agents`, which are not bundled. The full historical native runtime and original trace data require separately authorized archives.
+
 ## Standard-library repository checks
 
 ```bash
@@ -20,6 +22,18 @@ python3 scripts/generate_plots.py
 ```
 
 This produces two additional SVG and PNG charts from the CSVs in `data/outputs/benchmarks/`. All prior published charts remain available as SVG in `data/outputs/plots/`.
+
+## Rebuild and verify the E126 Kaggle candidate offline
+
+The E126 release in `src/e126_submission_agent.py` is a generated, self-contained research candidate, **not a Kaggle submission**. The binary checkpoint is in `assets/e126/`; its original teammate model provenance and permission require review.
+
+```bash
+python3 experiments/E126/build_candidate.py
+python3 scripts/verify_e126_release.py
+python3 -m unittest discover -s tests -v
+```
+
+These commands use only Python's standard library. The builder verifies frozen N117 and checkpoint SHA-256 hashes, reconstructs the generated notebook and agent, and the verifier checks that the rebuilt and committed bytes match their manifests. No SDK action, model inference, game rendering or Kaggle server run occurs. E126's stored E127 native results and E128 parity are **historical public-game evidence**, not results recomputed by these commands. The official Kaggle rerun remains unverified.
 
 ## Native replay and source archives
 

@@ -1,14 +1,28 @@
 {
   "repository": "Stralb/arc-agi-3-rl-research",
-  "as_of": "2026-10-26",
+  "as_of": "2026-10-27",
   "access": "public",
   "benchmark": "25 historically exposed public ARC-AGI-3 interactive games",
   "best_public": {
-    "controller": "local effect-memory",
+    "controller": "E126 hybrid trained",
+    "level1": 14,
+    "level2": 2,
+    "level3plus": 0,
+    "total": 16,
+    "policy_seeds": [
+      76,
+      77,
+      78
+    ],
+    "evaluated_on": "exposed public SDK; not independent generalization"
+  },
+  "previous_local_effect": {
+    "controller": "N117 local effect-memory",
     "level1": 13,
     "level2": 2,
     "level3plus": 0,
-    "total": 15
+    "total": 15,
+    "policy_seed": 76
   },
   "frozen_n093": {
     "level1": 13,
@@ -17,9 +31,10 @@
     "total": 14
   },
   "level3_native_wins": 0,
-  "official_kaggle_score": "not established",
-  "kaggle_submission": "not verified",
-  "deployment": "frozen N093 fallback; local effect-memory remains experimental",
-  "runtime_data": "SDK binaries and competition datasets excluded; archived restricted native frames not redistributed",
-  "verification": "subset of historical experimental evidence; full original archive is not committed; see docs/REPOSITORY_COVERAGE.md"
+  "official_kaggle_score": "not independently verified in this repository",
+  "e126_kaggle_submitted": false,
+  "submission_package_complete": false,
+  "deployment": "Preserve frozen N093 and N117; E126 remains an unsubmitted research candidate",
+  "runtime_data": "SDK binaries and original native frame traces absent; restricted assets not redistributed",
+  "verification": "Offline checks validate committed hashes, E126 deterministic packaging and historical public result arithmetic; native reruns need authorized archives"
 }

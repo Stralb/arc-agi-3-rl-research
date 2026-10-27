@@ -26,3 +26,4 @@ The archive preserves every major experiment and failure analysis without presen
 `N117` is used here as a repository catalog label for the **2026-10-26 deep-RL audit**; the archived directory does not claim this was an official N117 experiment number. This label is organizational, not an attempt to rewrite experiment history.
 
 For provenance and individual protocol, inspect the unmodified original reports rather than relying only on this summary.
+| E124–E126 | Observation-conditioned click ranking and transferred pretrained effect prior | Public candidate reaches 16 levels in each of three policy seeds vs 15/14/15 for N117; no L3 and no independently verified hidden gain |

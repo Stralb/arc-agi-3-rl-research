@@ -51,3 +51,5 @@ The following compact JSON files are original offline experiment outputs. Their 
 | [`experiments/N120/native_summary.json`](experiments/N120/native_summary.json) | N120 episodic-value native ablations |
 
 Interpreting the tables: a shorter game can mean earlier native `GAME_OVER`, not better efficiency. Raw completed-level counts are **not** the human-normalized RHAE metric or the official hidden Kaggle score.
+
+E126's later public comparison matrices and controls are in [`experiments/E126/results/`](../../experiments/E126/results/E127_AUDIT.md), with [paired and robustness CSVs](../../experiments/E126/results/robustness_summary.csv). They are separate from the historical N114/N117 benchmark data above.

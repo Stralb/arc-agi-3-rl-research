@@ -6,6 +6,7 @@ All findings refer to **historically exposed public games**, not Kaggle private 
 
 | File | Type |
 |---|---|
+| [`E126_SUBMISSION_CANDIDATE.md`](E126_SUBMISSION_CANDIDATE.md) | Newer observation-conditioned click exploration candidate; public only |
 | [`EXPERIMENT_CATALOG.md`](EXPERIMENT_CATALOG.md) | Research document |
 | [`N108_FINDINGS.md`](N108_FINDINGS.md) | Research document |
 | [`N109_FINDINGS.md`](N109_FINDINGS.md) | Research document |
