@@ -32,3 +32,11 @@ Key: VERIFIED, SUPPORTED BUT LIMITED, UNVERIFIED, CONTRADICTED, MISSING. All ext
 | SC-025 | Submission matches what linked code demonstrates | UNVERIFIED | E128 may describe later E126 submission; reconcile platform record with SHA. |
 
 **Deadline priority:** SC-020/21/22 and SC-018/23, then SC-005/06/07 original evidence recovery, then other methodological completeness. Never claim an official submission without platform receipt.
+
+## Requirement matrix reference — 2026-10-27
+The assignment was re-read in full, including restrictions, official scoring, qualitative rubric bands and leaderboard formula. Full 44-line classification and the provisional **55/90** (uncertainty 42–73) are in [REQUIREMENT_TO_EVIDENCE_MATRIX.md](REQUIREMENT_TO_EVIDENCE_MATRIX.md).
+- Course deadline: 27 October 2026, 23:59 SAST.
+- Main body maximum 8 pages; bibliography and optional post-reference supplemental pages excluded, but required evidence must be in the body.
+- Leaderboard: official public score of nominated eligible class-team code submission by deadline; `10*(N-r)/(N-1)` for N>1; all tied get 10; missing/invalid 0; valid zero-score remains eligible. **Unknown, not presumed zero.**
+- RLC 2026 official template / disabled cover / unchanged fonts,margins,spacing; `Kaggle-team-name.zip` PDF+matching notebook+evidence+team roles; Paper Track writeup link and saved text; no credentials.
+- E128 paper is available; named E127 PDF unavailable in inspected user attachments. No direct version comparison asserted.
