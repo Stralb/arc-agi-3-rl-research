@@ -49,3 +49,11 @@ Read [FORENSIC_CODE_AND_RESULTS_AUDIT.md](FORENSIC_CODE_AND_RESULTS_AUDIT.md) fo
 - Exact 3,072 recorded SDK calls per arm, DQN-I1 361 vs expected simple schedule 360: **OPEN** reconciliation; manuscript arithmetic alone passes.
 - E126 28 changed trajectories, 6 score-gaining pairs, 4 levels, 8,632 actions and reported mean SDK gain: **VERIFIED saved-table arithmetic**; native replay, hidden generalisation and official Kaggle score remain unverified.
 - Kaggle platform receipt for E126 ID57690887: **UNVERIFIED**; later paper and earlier not-submitted manifest disagree but may reflect different timestamps.
+
+## Six-perspective review note — 2026-10-27
+[Full six-review record](SIX_PERSPECTIVE_TRIBUNAL_20261027.md). All earlier mandatory checks remain open/closed as previously recorded; **no new lecturer requirements were invented**.
+- VERIFIED from PDF: Eight main pages, two reference pages; RLC exact source/template still UNVERIFIED.
+- VERIFIED omission: Figure 2 is acknowledged as first-reward timing, not full checkpoint learning curves.
+- UNVERIFIED: raw six-arm coursework training and evaluation runs; correctness of PPO masked log-probs and DQN-I2 mechanism.
+- UNVERIFIED/CONTRADICTED across snapshots: E126 official Kaggle ID 57690887 and 0.33 must be independently confirmed; earlier manifest predates possible submission.
+- MISSING: actual contribution statement, Paper Track and Moodle success receipts, class nominated rank.
