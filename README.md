@@ -78,3 +78,12 @@ The Kaggle deployment and leaderboard status is unknown. Neither notebook has be
 ![Per-family native completion matrix](data/outputs/plots/02_family_completion_matrix.svg)
 
 These plots are computed from historically exposed public runs and are not an official competition score.
+
+## E126 Kaggle submission candidate
+
+The frozen N117 agent has a newly packaged hybrid extension, E126,
+combining local click feedback with a selectively activated teammate
+pretrained action-effect model. Full details:
+[experiments/E126/README.md](experiments/E126/README.md).
+The [candidate notebook](notebooks/E126_Kaggle_Candidate.ipynb)
+is **not submitted**. No hidden-score improvement beyond 0.33 is verified.

@@ -48,3 +48,6 @@ All findings refer to **historically exposed public games**, not Kaggle private 
 | [`historical/N100_RESULTS_20261025.md`](historical/N100_RESULTS_20261025.md) | Research document |
 
 **N110 note:** Relational object resolution was proposed but not verified as an executed native experiment. No N110 result should be inferred.
+
+- [E126 click-exploration candidate](E126_SUBMISSION_CANDIDATE.md):
+  controlled ablations, local SDK robustness, verified release and caveats.
