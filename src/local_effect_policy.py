@@ -7,7 +7,7 @@ from __future__ import annotations
 from collections import Counter,deque
 from dataclasses import dataclass
 import numpy as np
-from submission import PretrainedPUCTCore
+from src.frozen_n093 import PretrainedPUCTCore
 
 MODES = ('baseline','transfer','local','combined','curiosity','curiosity_no_risk','pixel_novelty','random_novelty','skill','local_any_pixel','local_shuffled')
 

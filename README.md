@@ -26,6 +26,8 @@ N117 completed an additional Level 2 on `tu93`. In the original N093/N117 compar
 
 ![Level completions for N093 and N117](results/plots/level_completions.svg)
 
+The [game-by-game progression matrix](results/plots/family_completion_matrix.svg) shows where the two agents completed individual levels.
+
 E126 was evaluated with three policy seeds:
 
 | Seed | N117 levels | E126 levels | N117 mean SDK score | E126 mean SDK score |
