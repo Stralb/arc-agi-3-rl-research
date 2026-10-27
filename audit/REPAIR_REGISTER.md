@@ -80,3 +80,11 @@ Full 12-charge judgment and evidence-grounded marks: [JUDICIAL_ASSESSMENT_202610
 | RR-038 | P0 | Finalise actual member contribution statement, Paper Track link + saved text and Moodle ZIP/receipt; verify code/no secrets | OPEN | Authentic external submission records and manifest |
 | RR-039 | P1 | Record DQN-I1 pretrained model rights/origin/data exposure/training compute distinct from E126 peer CNN; isolate online/evaluation budgets | OPEN | Licence/permissions and grounded cost/provenance accounting |
 | RR-040 | P1 | Once primary evidence recovered, rebalance 8-page main only as scientifically supported: six-stage coursework central, genuine curves, bundles/control limits, E126 separate | BLOCKED pending RR-033/036 | Consistent source-linked report without deleting genuine nulls |
+
+
+## Executable improvement plan — 2026-10-27
+The [15-task REPAIR_PLAN_20261027.md](REPAIR_PLAN_20261027.md) makes judicial RR-033 through RR-040 actionable. **P0 (8 tasks):** RP-01 retrieve/freeze exact course provenance (BLOCKED ORIGINAL ARCHIVE); RP-02 DQN correctness (BLOCKED RP-01); RP-03 PPO masked probability correctness (BLOCKED RP-01); RP-04 classify DQN-I2 substance (BLOCKED RP-01/02); RP-05 reconcile all 108 original runs (BLOCKED RP-01); RP-06 budget-indexed curve feasibility (screening READY, core data BLOCKED); RP-07 official Kaggle receipt/class nomination (BLOCKED PLATFORM); RP-08 team roles/receipts/packaging (PARTLY READY).
+**P1:** RP-09 failure/success evidence (N-series READY; coursework BLOCKED); RP-10 matched DQN/PPO analysis (BLOCKED RP-05); RP-11 ablation-to-mechanism mapping (N-series READY; PPO BLOCKED); RP-12 two-model pretraining/cost/permissions (E126 READY; DQN/rights BLOCKED).
+**P2:** RP-13 eight-page E126 condensation outline (READY, constrained by missing coursework findings); RP-14 original E128 LaTeX/figures/build parity (BLOCKED on exact source).
+**P3 conditional only:** RP-15 tiny isolated test if RP-04 reveals a scientifically important unanswered change, archives cannot resolve it, legal budget/time exist. **No large retraining by default.**
+Acceptance and per-task source/verification requirements are in the plan. Existing RR items remain OPEN until genuine evidence/tests close them; plan creation itself closes none.
