@@ -77,7 +77,7 @@ This is an evidence-discounted senior-lecturer simulation, **not an official gra
 | Component | Score now | Out of | Explanation |
 |---|---:|---:|---|
 | Problem formulation and understanding | **8** | 10 | Clear POMDP/reward distinctions, DQN/PPO objectives and sourced background; minor action/reset precision |
-| Baseline implementation and evaluation | **11** | 20 | Two methods plausibly reported, random control and matched 12-arm rows, but exact DQN/PPO source, raw logs/checkpoints not located |
+| Baseline implementation and evaluation | **11** | 20 | Two methods plausibly reported, random control and matched 12-run-per-arm rows, but exact DQN/PPO source, raw logs/checkpoints not located |
 | Iterative improvements | **14** | 25 | Four named evaluated interventions, clear negative outcomes; DQN-I1 bundled effects, I2 substantive interpretation and missing raw evidence limit validation |
 | Experimental rigour and analysis | **15** | 25 | Fair on-policy study description, seeds, negative controls, disclosed dev exposure and excellent caution; no actual learning curves, prior compute unequal, raw evidence missing |
 | Report quality and reproducibility | **7** | 10 | Coherent 8-page main with helpful figures/citations; exact template source, submission receipts and roles incomplete |
