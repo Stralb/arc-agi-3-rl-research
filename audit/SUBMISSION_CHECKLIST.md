@@ -101,3 +101,6 @@ Compiled 8 total pages with references on p8; included RLJ/RLC 2026.1 style copy
 
 ## E132 figures status — 2026-10-27
 Three required *native-progress-versus-interaction-budget* displays added and verified in E132 PDF, with exact 12-run denominator and no synthetic events. They are explicitly NOT verified checkpoint-learning curves, and separate lecturer learning/adaptation-evidence requirement remains only partially addressed. Paper uses included RLJ 2026.1 review style copy, eight main pages/references p9; original E129/E131 files preserved. See [E132 record](E132_THREE_NATIVE_CURVES_20261027.md). Official lecturer style SHA, team contributions and platform submissions remain unresolved.
+
+## E133 review-copy check (2026-10-27)
+[Compiled results revision](E133_RESULTS_DISCUSSION_20261027.md): E133 PDF, LaTeX and zip, nine physical pages with references starting page eight; main body within eight pages; included 2026.1 style copy cover disabled; 45/45 curve tests and 61/61 manuscript QA with clean rebuild match. This is a technically verified review artifact, **not** independently verified course training, official template identity or official competition/Moodle/Paper Track submission. Actual contribution statement and Kaggle class rank remain pending.
