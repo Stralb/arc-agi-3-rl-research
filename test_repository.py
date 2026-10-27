@@ -28,7 +28,9 @@ class RepositoryTests(unittest.TestCase):
         for term in ("N093:", "N117:", "E126 seed 76:", "hybrid=16", "not private Kaggle"):
             self.assertIn(term, p.stdout)
 
-    def test_readme_and_results_links(self):
+    def test_single_readme_and_links(self):
+        self.assertFalse((ROOT / "RESULTS.md").exists())
+        self.assertIn("## Results on public games", (ROOT / "README.md").read_text(encoding="utf-8"))
         for md in ROOT.rglob("*.md"):
             for link in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", md.read_text(encoding="utf-8")):
                 target = link.split("#", 1)[0].split("?", 1)[0].strip("<>")
