@@ -4,7 +4,15 @@
 
 **PUBLISHING STATUS (2026-10-26): CURATED PUBLIC ARCHIVE.** Both self-contained agent sources and both Kaggle-format notebooks are now committed. Reports, core tabular evidence and SVG plots are also present. The much larger offline archive is *not* fully published: original native trace/frame archives, third-party SDK files and some intermediate scripts remain outside the public GitHub tree. The original N114 and N117 native runners and replay verifiers are now committed for authorized local reproduction. See [coverage](docs/REPOSITORY_COVERAGE.md).
 
-This repository organizes a multi-experiment, Kaggle-legal ARC-AGI-3 interactive-agent research project. It contains reproducible Python agent sources, the frozen and experimental Kaggle notebooks, reports, per-family and per-action result files, failure studies and generated plots. The evaluations use **25 historically exposed public interactive game fixtures** and the **native SDK action interface**, not ARC-AGI-1's 400+400 static grid tasks.
+This repository organizes a multi-experiment ARC-AGI-3 interactive-agent research project. It contains reproducible Python agent sources, the frozen and experimental Kaggle notebooks, reports, per-family and per-action result files, failure studies and generated plots. The evaluations use **25 historically exposed public interactive game fixtures** and the **native SDK action interface**, not ARC-AGI-1's 400+400 static grid tasks.
+
+## Assignment submission status (27 October 2026)
+
+This is a **curated public research repository**, not the Moodle submission ZIP. The assignment requires an RLC 2026 report PDF (at most eight main-content pages), source notebook matching the nominated code submission, proof of code-submission ID/score/timestamp, class nomination, Paper Track write-up/link, and a group contribution statement. The current tracked tree contains **no PDF or LaTeX manuscript** and no complete submission-evidence package. The brief does **not** mandate a README.txt; this README.md is the single root entry point.
+
+Two qualified learning algorithms and two separately evaluated substantive improvements **per algorithm** must be demonstrated in the report. The public snapshot is centered on the B1/N093 Bellman/PUCT lineage; it is **not established here** that the second required algorithm (for example PPO) and its required comparisons are fully evidenced by these committed files. An unchanged existing model or auxiliary effect classifier cannot substitute for that requirement.
+
+The unmerged [E126 candidate branch](https://github.com/Stralb/arc-agi-3-rl-research/tree/feat/e126-kaggle-release-20261027) adds a notebook, pretrained click-effect model and public-development evaluation. Its source and results are not part of `main` until separately reviewed and merged. Do not present its local SDK score as a hidden Kaggle score. Consult the branch's experiment report and official notebook rerun before selecting a final submission.
 
 ## Most important result
 
