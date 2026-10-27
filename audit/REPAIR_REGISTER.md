@@ -35,3 +35,13 @@ Linked full audit: [FORENSIC_CODE_AND_RESULTS_AUDIT.md](FORENSIC_CODE_AND_RESULT
 - RR-023 [P1, DONE static check only]: Confirmed N093→N117→E126 source-prefix inheritance, E126 no PPO gradients, frozen CNN and sparse gate. Native execution remains unverified.
 - RR-024 [P1, DONE recorded-data arithmetic only]: Independently reaggregated 1,125 E126 records and 36 paired-difference rows; no unexpected arithmetic discrepancies found. Original frame-hash replay remains open.
 - RR-025 [P1, OPEN]: Verify E126 `s5i5` first divergent same-frame action 3 and complete 8,632-action trace against owner-held `E124_E125_E126_FULL_NATIVE_EVIDENCE.zip`.
+
+## Six-perspective review additions — 2026-10-27
+Full separate and cross-review report: [SIX_PERSPECTIVE_TRIBUNAL_20261027.md](SIX_PERSPECTIVE_TRIBUNAL_20261027.md).
+- RR-020 | P0 | UNVERIFIED: PPO-I2 masked old/new log-probability ratio and conditional click support | Audit exact rollout/update code with stored/recomputed mask, legal actions, entropy, log-prob values | OPEN; original source not yet located.
+- RR-021 | P0 | UNVERIFIED: DQN target-bootstrap terminal/legal masks, actual gradient updates and DQN-I2 exploration branch | Inspect source and event triggers, compare I1/I2 matched actions, reject pure tuning as substantive without stronger mechanism | OPEN.
+- RR-022 | P0 | VERIFIED missing paper evidence: true learning/adaptation checkpoint curves | Search original records; no fabricated surrogate from first-reward timing | OPEN.
+- RR-023 | P1 | E126 changed choices 28/75 vs only six positive score pairs and four extra levels, all gains from two exposed families | Keep descriptive inference and leave-one-family analysis | OPEN (paper already cautiously reports core limitation).
+- RR-024 | P0 | Official Kaggle provenance mismatch and missing submission/team receipts | Verify platform server records with version/time/SHA, author contributions and Moodle/Paper Track status | OPEN; not a misconduct finding.
+- RR-025 | P1 | E126 offline verification is not fresh SDK replay; original owner-held trace files absent | Reconstruct authorized SDK and verify source/frame hashes if available | OPEN.
+- RR-026 | P1 | Report balance: separate E126 narrative outweighs core six-stage coursework evidence | Only after science verification, prioritize rubric-critical evidence within eight main pages | OPEN; paper unchanged.
