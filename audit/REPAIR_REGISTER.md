@@ -62,3 +62,6 @@ Full separate and cross-review report: [SIX_PERSPECTIVE_TRIBUNAL_20261027.md](SI
 - CP-04: **VALID, potentially substantial work** — actual budget-indexed learning/adaptation data; cumulative win timing is insufficient.
 - CP-05/08/09/10/11/12: **PARTIALLY REBUTTED** — preserve precise narrow concerns (conditional epsilon-tuning, bundles, all-in compute, single-case ablations, generalization and narrative emphasis); reject accusations that null result or disclosure is a scientific error.
 No paper/code/checkpoint/result changes in this update.
+
+## Moderator dispositions — 2026-10-27
+[SCIENTIFIC_CROSS_EXAMINATION_20261027.md](SCIENTIFIC_CROSS_EXAMINATION_20261027.md) establishes **no confirmed defect** in uninspected DQN/PPO training source. It establishes missing learning/adaptation curves and no individual DQN-I1 component attribution; E126 architecture confirmed. **P0** recover original six-arm source/108 trial records, check PPO mask ratios and DQN-I2 conditional schedule; obtain legitimate budget-indexed curves and Kaggle receipt. **P1** reconcile all-in pretraining and source/checkpoint lifecycle; original SDK E126 traces. No manuscript alteration performed.
