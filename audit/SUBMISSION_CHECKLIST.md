@@ -68,3 +68,6 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## Defence brief checkpoint — 2026-10-27
 [CASE_FOR_DEFENCE_20261027.md](CASE_FOR_DEFENCE_20261027.md) cross-references all twelve original charges. No submission confirmations were obtained or asserted by this defence. The verified source subset and historical manifest remain distinct from original cluster evidence and official platform records. Missing learning/adaptation curves and confirmed contribution statements remain open. All initial course requirements and deadline statuses are unchanged.
+
+## Cross-examination checkpoint — 2026-10-27
+[Formal moderator rulings](SCIENTIFIC_CROSS_EXAMINATION_20261027.md). Confirmed report deficit: full learning/adaptation curve. Confirmed paper placeholder: actual contribution statement. Course DQN/PPO verification and Kaggle class nomination remain open, not proved absent. No class leaderboard marks assigned. No source/experiment/paper rewrite or submission was performed.
