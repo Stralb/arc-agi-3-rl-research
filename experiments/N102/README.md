@@ -1,6 +1,6 @@
 # N102 Offline Research Package
 
-See [FINDINGS.md](FINDINGS.md) for methods, negative controls, matched metrics, limitations and go/no-go decisions.
+See [the archived N102 findings](../../reports/findings/N102_AFFORDANCE_AND_CONTRASTIVE.md) for methods, negative controls, matched metrics, limitations and go/no-go decisions. The commands below refer to the separately retained original N102 offline package, not a complete runnable copy in this GitHub subset.
 
 ## Required Python dependencies
 

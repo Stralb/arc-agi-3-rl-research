@@ -1,5 +1,7 @@
 # Reproducing the published ARC-AGI-3 evidence
 
+**Environment:** Python 3.11+ for the published source checks; NumPy, SciPy and PyTorch for native-agent Python imports (see [`requirements-agent.txt`](../requirements-agent.txt)). The official ARC SDK additionally supplies `arcengine` and `agents`, which are not bundled. The full historical native runtime and original trace data require separately authorized archives.
+
 ## Standard-library repository checks
 
 ```bash

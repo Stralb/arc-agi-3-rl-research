@@ -1,80 +1,51 @@
-# ARC-AGI-3 — Reinforcement Learning Agents and Experimental Evidence
+# ARC-AGI-3 — Interactive Reinforcement Learning Research
 
-**Repository:** `Stralb/arc-agi-3-rl-research` · **Status:** Public, own code and derived results only; official SDK and original game assets excluded.
+This repository preserves a **public, curated research snapshot** of agents for ARC-AGI-3 interactive games. It contains the frozen B1/N093 optimistic Bellman + PUCT control, an experimental local action-effect variant, native evaluation summaries and documented negative results. Results concern **25 previously exposed public games**, not unseen-game generalization or an official Kaggle score.
 
-**PUBLISHING STATUS (2026-10-26): CURATED PUBLIC ARCHIVE.** Both self-contained agent sources and both Kaggle-format notebooks are now committed. Reports, core tabular evidence and SVG plots are also present. The much larger offline archive is *not* fully published: original native trace/frame archives, third-party SDK files and some intermediate scripts remain outside the public GitHub tree. The original N114 and N117 native runners and replay verifiers are now committed for authorized local reproduction. See [coverage](docs/REPOSITORY_COVERAGE.md).
+## Verify the published snapshot
 
-This repository organizes a multi-experiment, Kaggle-legal ARC-AGI-3 interactive-agent research project. It contains reproducible Python agent sources, the frozen and experimental Kaggle notebooks, reports, per-family and per-action result files, failure studies and generated plots. The evaluations use **25 historically exposed public interactive game fixtures** and the **native SDK action interface**, not ARC-AGI-1's 400+400 static grid tasks.
-
-## Most important result
-
-| Agent | Level 1 | Level 2 | Level 3+ | Total public levels | Status |
-|---|---:|---:|---:|---:|---|
-| **Best measured public: local effect-memory** (`src/best_public_agent.py`) | 13 | **2** | 0 | **15** | Research candidate; not independently generalized |
-| **Frozen B1 + N093 pretrained PUCT** (`src/baselines/frozen_n093.py`) | 13 | 1 | 0 | 14 | Immutable, conservative fallback |
-
-The new local-effect Level-2 winner is `tu93`; both agents clear `vc33` Level 2. No tested method completed Level 3. **Neither score is an official Kaggle leaderboard score or human-normalized RHAE.** Lower total action counts can reflect earlier native `GAME_OVER`, not efficiency improvements.
-
-> **Public distribution caveat:** The live GitHub repository includes a curated subset of the much larger offline archive. See [repository coverage](docs/REPOSITORY_COVERAGE.md), [research decisions](reports/RESEARCH_DECISIONS.md) and [provenance](data/provenance/README.md). No private Kaggle score or new Level-3 win is claimed.
-
-## Browse the committed research
-
-- [Complete research-report index](reports/INDEX.md)
-- [Experiment implementations and protocols](experiments/INDEX.md)
-- [Results tables and plots](data/outputs/INDEX.md)
-- [Original archive SHA-256 evidence](data/provenance/ARCHIVE_SHA256_MANIFEST.json)
-- [Published-versus-omitted evidence inventory](docs/REPOSITORY_COVERAGE.md)
-- [Offline reproduction and CI checks](docs/REPRODUCIBILITY.md)
-
-## Structure
-
-```text
-src/                  Best public measured agent, frozen baseline, algorithm module
-notebooks/            Original frozen and local-effect Kaggle-format submissions
-experiments/          N093 and N101–N120 experimental Python, protocols and tests
-reports/              Research synthesis, archived original reports and full findings
-data/outputs/         Native summary matrices and selected action-level diagnostics
-data/outputs/plots/   Committed SVG figures; PNGs regenerate locally
-data/provenance/      File-level source/hashes and original asset manifest
-scripts/              Offline verification, plot regeneration, authorized SDK staging
-tests/                Repository integrity and benchmark-consistency checks
-.github/workflows/    Offline CI that never submits or downloads competition games
-```
-
-## Quick start
+**Python 3.11+**; these verification commands need only the Python standard library.
 
 ```bash
 git clone https://github.com/Stralb/arc-agi-3-rl-research.git
 cd arc-agi-3-rl-research
 python3 scripts/verify_repository.py
 python3 -m unittest discover -s tests -v
+python3 scripts/summarize_results.py
+```
+
+To regenerate the public-result charts (requires a separate analysis environment):
+
+```bash
 python3 -m pip install -r requirements-analysis.txt
 python3 scripts/generate_plots.py
 ```
 
-The first two checks use only the Python standard library and validate the published subset. They do not validate unavailable original native frames or private Kaggle scores.
+## Where to look
 
-## Read the results
+| What | Location |
+|---|---|
+| Frozen reference agent and experimental local-effect agent | [`src/`](src/README.md) |
+| Kaggle-format source notebooks (no verified submission from this repo) | [`notebooks/`](notebooks/README.md) |
+| Experimental implementations, ablations and protocols | [`experiments/`](experiments/INDEX.md) |
+| Main findings and negative results | [`reports/RESEARCH_SUMMARY.md`](reports/RESEARCH_SUMMARY.md), [research index](reports/INDEX.md) |
+| Public native benchmark tables and SVG figures | [`data/outputs/`](data/outputs/INDEX.md) |
+| Source archive hashes and unpublished-asset inventory | [provenance](data/provenance/README.md), [coverage](docs/REPOSITORY_COVERAGE.md) |
+| Exact offline/native reproduction boundary | [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) |
 
-- [`reports/RESEARCH_SUMMARY.md`](reports/RESEARCH_SUMMARY.md): scientific conclusions, exact baseline comparison and risks.
-- [`reports/EXPERIMENT_CATALOG.md`](reports/EXPERIMENT_CATALOG.md): prior experiments and verified negative controls.
-- [`data/outputs/benchmarks/n117_local_vs_frozen_25.csv`](data/outputs/benchmarks/n117_local_vs_frozen_25.csv): complete per-family comparison.
-- [`data/outputs/plots/`](data/outputs/plots/): plots of native completions, progression, budget, and predictive tradeoffs.
-- [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md): code, inputs, provenance and actions counted.
-- [`docs/DATA_AND_LICENSES.md`](docs/DATA_AND_LICENSES.md): competition data and third-party license restrictions.
+## Observed public-development results
 
-## Reproducibility and scientific claims
+| Frozen / candidate | Level 1 | Level 2 | Level 3+ | Total completed levels |
+|---|---:|---:|---:|---:|
+| Frozen B1 + N093 | 13 | 1 | 0 | **14** |
+| Local effect-memory | 13 | 2 | 0 | **15** |
 
-All published counts in this snapshot refer to **archived native local runs**, not fresh runs during GitHub packaging. Original source and data hashes are logged under `data/provenance/`. Results are from exposed development/public fixtures; model-selection on those fixtures prevents claims of independent generalization.
+The additional Level-2 completion was on `tu93`. These are archived native SDK results, **not official Kaggle leaderboard scores**. Fewer charged actions can mean earlier `GAME_OVER`, not greater efficiency. All 25 game families influenced research; no independent unseen-game gain is demonstrated.
 
-The Kaggle deployment and leaderboard status is unknown. Neither notebook has been submitted from this repository. The frozen N093 checkpoint is embedded in both source files.
+## Reproducing a native run
 
-**Research snapshot:** 2026-10-26.
+The public GitHub tree **does not contain the original game SDK, native frame/trace archives or private competition inputs**. To replay N114/N117, obtain the authorized original SDK archives, install the runtime dependencies in [`requirements-agent.txt`](requirements-agent.txt), and follow the checksum-verified [native staging commands](docs/REPRODUCIBILITY.md). The standard-library checks above validate committed files and arithmetic, **not** a fresh ARC game execution.
 
-## Key public benchmark figures
+The later **E126 research candidate** is retained on a [separate development branch](https://github.com/Stralb/arc-agi-3-rl-research/tree/feat/e126-kaggle-release-20261027); it is not part of this frozen `main` snapshot and has not been verified on Kaggle's official rerun.
 
-![Level completions in frozen N093 versus local effect-memory](data/outputs/plots/01_level_completions.svg)
-
-![Per-family native completion matrix](data/outputs/plots/02_family_completion_matrix.svg)
-
-These plots are computed from historically exposed public runs and are not an official competition score.
+**Submission status:** This GitHub repository is a research archive, **not the complete Moodle submission**. The assignment's final report PDF, team contribution statement, and Kaggle/Paper Track submission identifiers or evidence are not present here. See [data and licensing boundaries](docs/DATA_AND_LICENSES.md) before sharing additional assets.
