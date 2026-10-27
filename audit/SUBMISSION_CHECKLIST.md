@@ -75,3 +75,7 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## Judicial readiness checkpoint — 2026-10-27
 [Final judicial assessment](JUDICIAL_ASSESSMENT_20261027.md) rates the **non-leaderboard** submission provisionally 55/90 (plausible 42–73/90; not official marks). **Leaderboard 10 remains unscored** pending nominated eligible class rank and authenticated Kaggle entry. Original six-arm source and 108 episode records: unverified. Learning/adaptation curves: confirmed incomplete. Actual contribution statement: confirmed unfinished in manuscript. Paper Track, Moodle, Kaggle external platform records: not independently checked. No paper/research modifications or platform submissions occurred in the audit.
+
+
+## Deadline-focused repair queue — 27 October 2026
+[15-task repair plan](REPAIR_PLAN_20261027.md) starts with source recovery instead of large retraining. Required artifacts not verified remain OPEN: original DQN/PPO core/control evidence, genuine curves, the later E126 official Kaggle platform receipt and nomination, real individual contributions, Paper Track records, Moodle ZIP and exact E128 LaTeX source. E126 local saved scores are not the class leaderboard score. No manuscript or actual competition entry was submitted or altered by creating the plan.
