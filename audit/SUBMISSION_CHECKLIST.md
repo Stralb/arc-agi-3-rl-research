@@ -79,3 +79,7 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## Deadline-focused repair queue — 27 October 2026
 [15-task repair plan](REPAIR_PLAN_20261027.md) starts with source recovery instead of large retraining. Required artifacts not verified remain OPEN: original DQN/PPO core/control evidence, genuine curves, the later E126 official Kaggle platform receipt and nomination, real individual contributions, Paper Track records, Moodle ZIP and exact E128 LaTeX source. E126 local saved scores are not the class leaderboard score. No manuscript or actual competition entry was submitted or altered by creating the plan.
+
+
+## Executed experimental evidence checkpoint — 2026-10-27
+[Offline analysis execution record](EXECUTED_EXPERIMENTAL_ANALYSIS_20261027.md) documents **14 passing tests, five generated candidate figures, E126 saved-data arithmetic verification and all 108 paper-reported coursework outcome cells preserved**. Original coursework source/logs and genuine learning/adaptation curves remain UNVERIFIED/MISSING; native SDK was not replayed. Official Kaggle ID57690887/0.33, class team rank, Moodle, Paper Track and author contributions remain open. No submitted report was modified; figures are candidates, not inserted. Do not treat new analysis package as proof of verified DQN/PPO training.
