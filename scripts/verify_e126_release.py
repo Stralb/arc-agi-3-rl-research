@@ -10,7 +10,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / "release/e126"
+BASE = ROOT / "release"
 MANIFEST = json.loads((BASE / "manifest.json").read_text(encoding="utf-8"))
 
 def sha256(path):
@@ -31,8 +31,8 @@ def cell_text(cell):
 def verify():
     frozen = ROOT / "src/best_public_agent.py"
     agent = ROOT / "src/e126_submission_agent.py"
-    notebook = ROOT / "notebooks/E126_Kaggle_Candidate.ipynb"
-    ckpt = ROOT / "assets/e126/effect_prior_s11.pt"
+    notebook = ROOT / "E126_Kaggle_Candidate.ipynb"
+    ckpt = ROOT / "release/effect_prior_s11.pt"
     for path, key in (
         (frozen, "frozen_n117_sha256"),
         (ckpt, "peer_effect_checkpoint_sha256"),

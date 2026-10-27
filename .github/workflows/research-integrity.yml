@@ -12,13 +12,13 @@ jobs:
       - name: Verify frozen agents and public benchmark results
         run: python3 scripts/verify_repository.py
       - name: Rebuild the E126 agent and notebook
-        run: python3 release/e126/build_candidate.py
+        run: python3 release/build_candidate.py
       - name: Verify checkpoint, notebook and per-game E126 results
         run: python3 scripts/verify_e126_release.py
       - name: Run regression tests
-        run: python3 -m unittest discover -s tests -v
+        run: python3 -m unittest test_repository -v
       - name: Check source syntax
-        run: python3 -m compileall -q src scripts release tests
+        run: python3 -m compileall -q src scripts release test_repository.py
       - name: Summarize saved results
         run: python3 scripts/summarize_results.py
       - name: Install chart dependencies

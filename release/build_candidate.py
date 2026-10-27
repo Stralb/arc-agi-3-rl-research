@@ -3,12 +3,12 @@
 from __future__ import annotations
 import base64,hashlib,json,os,runpy,shutil,textwrap,zlib
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[2]
+ROOT=Path(__file__).resolve().parents[1]
 HERE=Path(__file__).resolve().parent
 OUT=Path(os.environ.get('E126_OUTPUT_DIR',str(HERE/'build')))
 OUT.mkdir(parents=True,exist_ok=True)
 FROZEN=ROOT/'src/best_public_agent.py'
-PEER=ROOT/'assets/e126/effect_prior_s11.pt'
+PEER=ROOT/'release/effect_prior_s11.pt'
 FSHA='0663845070e47a053076db54243c3445921a06b4bf0908b7b233c263da423bfa'
 PSHA='c5882f664b082aa131023ac1ffaebeb771ba7fe181fa909730fe1c641e5978b9'
 assert hashlib.sha256(FROZEN.read_bytes()).hexdigest()==FSHA

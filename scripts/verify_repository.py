@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 HASHES = {
-    "src/baselines/frozen_n093.py": "e6c6a49c82e93294ae42eb1ee9d87d94a1dde329964e1d7358f63c7d63ba184d",
+    "src/frozen_n093.py": "e6c6a49c82e93294ae42eb1ee9d87d94a1dde329964e1d7358f63c7d63ba184d",
     "src/best_public_agent.py": "0663845070e47a053076db54243c3445921a06b4bf0908b7b233c263da423bfa",
 }
 
@@ -26,8 +26,8 @@ def verify():
         assert hashlib.sha256(file.read_bytes()).hexdigest() == expected, relative
         ast.parse(file.read_text(encoding="utf-8"), filename=relative)
     ast.parse((ROOT / "src/e126_submission_agent.py").read_text(), filename="e126_submission_agent.py")
-    ast.parse((ROOT / "src/algorithms/local_effect_policy.py").read_text(), filename="local_effect_policy.py")
-    assert (ROOT / "assets/e126/effect_prior_s11.pt").is_file()
+    ast.parse((ROOT / "src/local_effect_policy.py").read_text(), filename="local_effect_policy.py")
+    assert (ROOT / "release/effect_prior_s11.pt").is_file()
 
     frozen = read_csv("results/n093_public25.csv")
     local = read_csv("results/n117_public25.csv")
@@ -52,7 +52,7 @@ def verify():
     for svg in (ROOT / "results/plots").glob("*.svg"):
         assert ET.parse(svg).getroot().tag.endswith("svg"), svg
 
-    notebook = json.loads((ROOT / "notebooks/E126_Kaggle_Candidate.ipynb").read_text())
+    notebook = json.loads((ROOT / "E126_Kaggle_Candidate.ipynb").read_text())
     assert notebook["nbformat"] == 4
     assert any(c["cell_type"] == "code" for c in notebook["cells"])
     print("PASS: immutable N093/N117 sources, local SDK results, ablations and figures")

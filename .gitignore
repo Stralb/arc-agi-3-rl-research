@@ -27,5 +27,5 @@ data/inputs/
 arc-prize-2026-arc-agi-3.zip
 
 # Reproducibly generated E126 package and plots
-release/e126/build/
+release/build/
 results/plots/recomputed_*
