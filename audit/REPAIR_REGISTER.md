@@ -45,3 +45,12 @@ Full separate and cross-review report: [SIX_PERSPECTIVE_TRIBUNAL_20261027.md](SI
 - RR-024 | P0 | Official Kaggle provenance mismatch and missing submission/team receipts | Verify platform server records with version/time/SHA, author contributions and Moodle/Paper Track status | OPEN; not a misconduct finding.
 - RR-025 | P1 | E126 offline verification is not fresh SDK replay; original owner-held trace files absent | Reconstruct authorized SDK and verify source/frame hashes if available | OPEN.
 - RR-026 | P1 | Report balance: separate E126 narrative outweighs core six-stage coursework evidence | Only after science verification, prioritize rubric-critical evidence within eight main pages | OPEN; paper unchanged.
+
+## Formal academic prosecution 2026-10-27
+[Ranked case and exact dismissal tests](CASE_FOR_PROSECUTION_20261027.md), CP-01 through CP-12. No manuscript or source changes.
+- RR-027 [P0 OPEN] Close CP-01/06/07: recover and audit six-stage DQN/PPO source, train/eval split, 108 total original logged episodes, scorer version, optimizer and target/log-prob invariants; investigate 361 DQN-I1 versus nominal 360 update schedule.
+- RR-028 [P0 OPEN] Close CP-04: recover genuine budget-indexed learning/adaptation trace; do not relabel cumulative first win figure.
+- RR-029 [P0 OPEN] Close CP-05: source-review DQN-I2 stall-state logic and matched epsilon controls; prove substantive or classify honestly as tuning.
+- RR-030 [P0 OPEN] Close CP-02/03: reconcile E126 Kaggle ID 57690887 with earlier manifest, team nomination/class rank, author contributions, Paper Track and Moodle receipts.
+- RR-031 [P1 OPEN] Close CP-08/09/10: report DQN-I1 as a bundled causal treatment; verify original PPO mask-only control; document separately pretraining/online/eval costs and teammate checkpoint rights.
+- RR-032 [P2 OPEN] Close CP-11/12 through cautious generalization language and evidence-led page prioritization, with no unjustified promise of new holdout.
