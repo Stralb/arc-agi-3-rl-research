@@ -1,6 +1,0 @@
-# Python 3.11+ runtime imports used by the published agent sources.
-# The official ARC-AGI-3 SDK provides arcengine and agents; obtain it
-# separately under the competition's terms. It is not vendored here.
-numpy>=1.24
-scipy
-torch

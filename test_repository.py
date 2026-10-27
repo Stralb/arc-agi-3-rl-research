@@ -52,6 +52,17 @@ class RepositoryTests(unittest.TestCase):
         for file in images:
             self.assertTrue(ET.parse(file).getroot().tag.endswith("svg"), str(file))
 
+    def test_single_requirements_file(self):
+        self.assertTrue((ROOT / "requirements.txt").is_file())
+        self.assertFalse((ROOT / "requirements-agent.txt").exists())
+        self.assertFalse((ROOT / "requirements-analysis.txt").exists())
+        dependencies = [
+            line.strip() for line in (ROOT / "requirements.txt").read_text().splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        ]
+        self.assertEqual(len(dependencies), len(set(dependencies)))
+        self.assertTrue({"numpy>=1.24", "scipy", "torch", "pandas>=2.0", "matplotlib>=3.7"}.issubset(dependencies))
+
     def test_archive_not_cluttering_main(self):
         for historical in ("experiments", "reports", "data", "docs", "assets", "notebooks", "tests",
                            "src/algorithms", "src/baselines", "release/e126"):

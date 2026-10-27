@@ -59,7 +59,7 @@ python3 scripts/summarize_results.py
 For additional plots:
 
 ```bash
-python3 -m pip install -r requirements-analysis.txt
+python3 -m pip install -r requirements.txt
 python3 scripts/generate_plots.py
 ```
 
