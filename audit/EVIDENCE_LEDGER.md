@@ -57,3 +57,11 @@ Keep different protocols (DQN/PPO short matched study, N-series, E126 native pub
 - Native reproduction boundary: https://github.com/Stralb/arc-agi-3-rl-research/blob/archive/full-research-2026-10-27/docs/REPRODUCIBILITY.md
 
 Updated by initial connected-repository + attached-PDF inspection; preserve these source boundaries in subsequent revisions.
+
+## Assessment-only supplement — 2026-10-27
+Full lecturer requirement reconstruction and 44-row mapping: [REQUIREMENT_TO_EVIDENCE_MATRIX.md](REQUIREMENT_TO_EVIDENCE_MATRIX.md).
+- EL-026 **VERIFIED assignment requirement:** The lecturer explicitly requires DQN/course-algorithm and PPO/non-course-algorithm baselines, each with baseline and two substantive evaluated improvements; random reference; official score, completions/failures, learning/adaptation curves, compute, and >=3 independent stochastic seeds or justified limitation (assignment pp2–4).
+- EL-027 **VERIFIED report state:** E128 documents DQN/PPO 72-run study with 36 extra random/PPO ablations, but explicitly says its cumulative reward-event plot is **not** a proper training/checkpoint curve (E128 p5).
+- EL-028 **VERIFIED repository research context:** archived N118, N119, N120 reports contain negative studies and native SDK descriptions; they cannot stand in for missing original DQN/PPO six-arm logs.
+- EL-029 **UNVERIFIED Kaggle chronology:** E128 PDF creation 2026-10-27 at 12:00 UTC, whereas last inspected main commit was 09:32 UTC; repo 'not submitted' manifest could predate a later real server submission. Preserve source disagreement pending timestamp/source-hash receipt.
+- EL-030 **UNVERIFIED exact RLC build:** E128 has 8-page body and 2-page bibliography; its matching source and template flags were not recovered in repository snapshot.
