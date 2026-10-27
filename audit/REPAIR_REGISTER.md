@@ -54,3 +54,11 @@ Full separate and cross-review report: [SIX_PERSPECTIVE_TRIBUNAL_20261027.md](SI
 - RR-030 [P0 OPEN] Close CP-02/03: reconcile E126 Kaggle ID 57690887 with earlier manifest, team nomination/class rank, author contributions, Paper Track and Moodle receipts.
 - RR-031 [P1 OPEN] Close CP-08/09/10: report DQN-I1 as a bundled causal treatment; verify original PPO mask-only control; document separately pretraining/online/eval costs and teammate checkpoint rights.
 - RR-032 [P2 OPEN] Close CP-11/12 through cautious generalization language and evidence-led page prioritization, with no unjustified promise of new holdout.
+
+## Defence disposition — 2026-10-27
+[CASE_FOR_DEFENCE_20261027.md](CASE_FOR_DEFENCE_20261027.md) does not close any unverified claim with manuscript text alone.
+- CP-01/02/06/07: **STILL UNCERTAIN** — recover original course evidence and Kaggle server receipt; no source-level acquittal inferred.
+- CP-03: **VALID, potentially administrative repair** — factual roles and true external submission receipts, if available.
+- CP-04: **VALID, potentially substantial work** — actual budget-indexed learning/adaptation data; cumulative win timing is insufficient.
+- CP-05/08/09/10/11/12: **PARTIALLY REBUTTED** — preserve precise narrow concerns (conditional epsilon-tuning, bundles, all-in compute, single-case ablations, generalization and narrative emphasis); reject accusations that null result or disclosure is a scientific error.
+No paper/code/checkpoint/result changes in this update.
