@@ -95,3 +95,6 @@ Reviewed LaTeX/PDF source package created: seven physical pages, two primary fig
 
 ## E130 verified review build (2026-10-27)
 [Second-review result](SECOND_ADVERSARIAL_REVIEW_E130_20261027.md) and the generated E130 package provide reviewed/compiled LaTeX, 8 physical pages (7 main before references), default 2026.1 style copy without cover, two figures/tables, 41/41 QA, identical clean-room rebuild text, and source-tagged saved E126 arithmetic with bootstrap. These do **not** constitute official template byte verification, neural DQN/PPO source replay, a real learning curve, completed contributions, or Kaggle/Paper Track/Moodle submissions. Those requirements remain OPEN; leaderboard class mark not inferred.
+
+## E131 urgent report (2026-10-27)
+Compiled 8 total pages with references on p8; included RLJ/RLC 2026.1 style copy and commented-out cover, 36/36 manuscript/figure/citation/data QA checks, E129 original files preserved in delivery ZIP. Actual official lecturer style identity unverified. Main coursework performance figures are from documented contemporary report results and NOT independent SDK replay; true checkpoint/adaptation curve still missing. Individual contributions, official Kaggle receipt/class rank, Paper Track and Moodle records remain OPEN. See [execution record](E131_URGENT_REWRITE_20261027.md).
