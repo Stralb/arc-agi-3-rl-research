@@ -65,3 +65,17 @@ Full lecturer requirement reconstruction and 44-row mapping: [REQUIREMENT_TO_EVI
 - EL-028 **VERIFIED repository research context:** archived N118, N119, N120 reports contain negative studies and native SDK descriptions; they cannot stand in for missing original DQN/PPO six-arm logs.
 - EL-029 **UNVERIFIED Kaggle chronology:** E128 PDF creation 2026-10-27 at 12:00 UTC, whereas last inspected main commit was 09:32 UTC; repo 'not submitted' manifest could predate a later real server submission. Preserve source disagreement pending timestamp/source-hash receipt.
 - EL-030 **UNVERIFIED exact RLC build:** E128 has 8-page body and 2-page bibliography; its matching source and template flags were not recovered in repository snapshot.
+
+## Forensic-code supplement — 2026-10-27
+Full 30-claim source/result analysis: [FORENSIC_CODE_AND_RESULTS_AUDIT.md](FORENSIC_CODE_AND_RESULTS_AUDIT.md).
+- EL-031 VERIFIED source: fetched complete Git blobs N093 `e9e605c`, N117 `eb6f071`, E126 `84a4d30`; `N117.startsWith(N093)` and `E126.startsWith(N117)` passed static checks. No PPO/gradient-update code in the added E126 extension.
+- EL-032 VERIFIED source: N093 empirical Bellman transition-count backup with `Q=1` optimistic starting values, `gamma=.985`, no gradient updates in acting core; its `num_updates` is Bellman backup count.
+- EL-033 VERIFIED source: E126's trained auxiliary CNN is `eval()`, `requires_grad_(False)` and under `torch.inference_mode()`; activation restricted to Level-1 sparse click states, modal fraction >=0.80; Level-2+ defers to N117.
+- EL-034 VERIFIED source: E126 `_Temporal126.forward` does not consume `hist_grid/hist_mask`; only current and previous frames. Do not infer longer history from unused parameters.
+- EL-035 VERIFIED saved table arithmetic: E126 has 45*25=1,125 per-game rows and 125,220 summed recorded SDK actions; seed-specific 2872+2873+2887=8,632 E126 actions, 28 changed trajectories, 6 positive SDK pairs, 4 extra levels, 68.5376% of positive SDK gain from `s5i5`. No native SDK replay performed.
+- EL-036 VERIFIED saved source summary: N118 `L2+` 1,197 cases, Brier 0.169102→0.151572, false-negative 0.052879→0.122209. Prediction outcome not native control gain.
+- EL-037 UNVERIFIED original coursework: exact 72 DQN/PPO training runs and 36 random/PPO controls not retrieved from the connected GitHub tree; an earlier `e078_course_recovery` directory listing exists but is not the raw final study.
+- EL-038 FLAG (not disproved): under a simple 16-warmup, every-eight-actions schedule DQN updates are 360 per arm; DQN-I1 reports 361. Native full 3,072-action counts per 12-run arm also require terminal/reset accounting.
+- EL-039 UNVERIFIED/conditional: DQN-I2 epsilon escalation after 96 unrewarded steps is potentially a **borderline conditional schedule**, not necessarily a substantive algorithmic innovation. Source and paired changed-action records required; no definitive classification from prose.
+- EL-040 UNVERIFIED implementation correctness: PPO-I2 masked new-policy log probabilities must use identical support to stored old-policy sampling. Original rollout tensors/code not available.
+- EL-041 UNVERIFIED official Kaggle E126 0.33 / ID57690887; manifest remains `candidate_not_submitted` and paper created later. Avoid declaring false/verified without server receipt.
