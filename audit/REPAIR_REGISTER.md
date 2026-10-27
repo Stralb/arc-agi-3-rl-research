@@ -88,3 +88,23 @@ The [15-task REPAIR_PLAN_20261027.md](REPAIR_PLAN_20261027.md) makes judicial RR
 **P2:** RP-13 eight-page E126 condensation outline (READY, constrained by missing coursework findings); RP-14 original E128 LaTeX/figures/build parity (BLOCKED on exact source).
 **P3 conditional only:** RP-15 tiny isolated test if RP-04 reveals a scientifically important unanswered change, archives cannot resolve it, legal budget/time exist. **No large retraining by default.**
 Acceptance and per-task source/verification requirements are in the plan. Existing RR items remain OPEN until genuine evidence/tests close them; plan creation itself closes none.
+
+
+## Executed analyses and partial closures — 2026-10-27
+[Execution record](EXECUTED_EXPERIMENTAL_ANALYSIS_20261027.md), generated ZIP `arc3_experimental_audit_20261027.zip` (SHA256 `0610fcb1a5243d6ed67b388dca49b8b74234f9c0cfb83e11d3c43c72d8c31c7e`), **14 offline pytest PASSED**.
+
+| Task | Updated execution status | Scope and verification |
+|---|---|---|
+| RP-01 | BLOCKED | Exact 72-run DQN/PPO source/checkpoints and 36 control runs not in inspected GitHub subset or mounted files; earlier E078 or Phase3N protocols differ; no substitution. |
+| RP-02/03 | BLOCKED | Original DQN gradient and PPO masked log-prob sources unavailable; no source-level pass or bug claim. |
+| RP-04 | OPEN/UNVERIFIED | Paper-only DQN-I2 stall epsilon trigger 1769/3072; still cannot adjudicate substantive requirement. |
+| RP-05 | PARTIALLY COMPLETED | E126 75 paired games and E124–E126 45-arm summaries independently recomputed from GitHub files; 108 coursework cells reconstructed **only from E128 paper**, not original logs. |
+| RP-06 | INCOMPLETE REQUIREMENT | Two within-run first reward/attainment figures generated and correctly labelled **NOT learning curves**. No independent policy-checkpoint/adaptation-performance histories obtained. |
+| RP-09 | PARTIALLY COMPLETED | E126 s5i5/lf52 win/failure cases and N118 tu93 early GAME_OVER described with source; core coursework exact failure traces absent. |
+| RP-10 | PARTIALLY COMPLETED | Reconstructed 12-cell DQN-I2 vs PPO-I2 result matrix; two DQN-only, one PPO-only, nine tied cells; no unjustified significance or efficiency claim. |
+| RP-11 | PARTIALLY COMPLETED | Original E126 baseline/contingency/random/salience/trained controls verified from 45-row GitHub summary (44/45/45/45/48 levels). Original PPO mask-only and no-grad code/logs unverified. |
+| RP-12 | OPEN | Externally pretrained coursework effect encoder and E125 peer CNN are different; full compute/licence data not obtained. |
+| RP-07/08 | OPEN | No independent Kaggle server receipt, team role list, Paper Track or Moodle confirmation. |
+| RP-13/14 | NOT STARTED (paper remains unchanged) | Generated figures are candidates only; no E128 LaTeX source or final manuscript rewrite. |
+
+No task was marked fully closed merely on paper-derived data. All original experimental assets preserved; no SDK game actions, new training, or Kaggle submissions performed.
