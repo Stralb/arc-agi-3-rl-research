@@ -91,3 +91,7 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## E129 review compilation checkpoint — 27 October 2026
 Reviewed LaTeX/PDF source package created: seven physical pages, two primary figures, two tables, **no cover page**, RLJ/RLC 2026.1 style copy, 33/33 QA checks and independent clean-folder build with identical extracted PDF text. This is **not a certification of actual lecturer official style byte parity** (original E128 .tex and authoritative downloadable style unavailable) or of official submission. The paper openly retains missing neural learning/adaptation curves, unavailable original DQN/PPO 108-run source/logs, unverified DQN-I2/PPO masked updates, author contributions, pretrained rights, and official Kaggle/Paper Track/Moodle receipts. No external upload or model training was carried out.
+
+
+## E130 verified review build (2026-10-27)
+[Second-review result](SECOND_ADVERSARIAL_REVIEW_E130_20261027.md) and the generated E130 package provide reviewed/compiled LaTeX, 8 physical pages (7 main before references), default 2026.1 style copy without cover, two figures/tables, 41/41 QA, identical clean-room rebuild text, and source-tagged saved E126 arithmetic with bootstrap. These do **not** constitute official template byte verification, neural DQN/PPO source replay, a real learning curve, completed contributions, or Kaggle/Paper Track/Moodle submissions. Those requirements remain OPEN; leaderboard class mark not inferred.
