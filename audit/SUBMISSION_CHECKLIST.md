@@ -83,3 +83,7 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 
 ## Executed experimental evidence checkpoint — 2026-10-27
 [Offline analysis execution record](EXECUTED_EXPERIMENTAL_ANALYSIS_20261027.md) documents **14 passing tests, five generated candidate figures, E126 saved-data arithmetic verification and all 108 paper-reported coursework outcome cells preserved**. Original coursework source/logs and genuine learning/adaptation curves remain UNVERIFIED/MISSING; native SDK was not replayed. Official Kaggle ID57690887/0.33, class team rank, Moodle, Paper Track and author contributions remain open. No submitted report was modified; figures are candidates, not inserted. Do not treat new analysis package as proof of verified DQN/PPO training.
+
+
+## Manuscript-architecture check (2026-10-27)
+[Proposed layout](REPORT_ARCHITECTURE_20261027.md) budgets exactly eight main-page equivalents and references afterward. It explicitly preserves all mandated coursework sections and locates separate E126 extension. Official RLJ/RLC 2026 template and disabled cover must be verified from **actual compiling source**, not an unrelated general template; do not shrink template fonts/margins. Original six-arm DQN/PPO source, genuine learning curve, author contribution statement, Paper Track, Kaggle server record and Moodle receipts remain open. No report text modified by this architecture plan.
