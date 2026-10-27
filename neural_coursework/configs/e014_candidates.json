@@ -1,0 +1,707 @@
+{
+  "schema": 1,
+  "candidates": [
+    {
+      "id": "control",
+      "family": "control"
+    },
+    {
+      "id": "succ_w8_s015",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 8,
+        "scale": 0.15,
+        "decay": 0.85
+      }
+    },
+    {
+      "id": "succ_w8_s03",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 8,
+        "scale": 0.3,
+        "decay": 0.85
+      }
+    },
+    {
+      "id": "succ_w8_s06",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 8,
+        "scale": 0.6,
+        "decay": 0.85
+      }
+    },
+    {
+      "id": "succ_w8_s09",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 8,
+        "scale": 0.9,
+        "decay": 0.85
+      }
+    },
+    {
+      "id": "succ_w16_s015",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.15,
+        "decay": 0.93
+      }
+    },
+    {
+      "id": "succ_w16_s03",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      }
+    },
+    {
+      "id": "succ_w16_s06",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.6,
+        "decay": 0.93
+      }
+    },
+    {
+      "id": "succ_w16_s09",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.9,
+        "decay": 0.93
+      }
+    },
+    {
+      "id": "succ_w32_s015",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 32,
+        "scale": 0.15,
+        "decay": 0.97
+      }
+    },
+    {
+      "id": "succ_w32_s03",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 32,
+        "scale": 0.3,
+        "decay": 0.97
+      }
+    },
+    {
+      "id": "succ_w32_s06",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 32,
+        "scale": 0.6,
+        "decay": 0.97
+      }
+    },
+    {
+      "id": "succ_w32_s09",
+      "family": "success_backfill",
+      "success_backfill": {
+        "window": 32,
+        "scale": 0.9,
+        "decay": 0.97
+      }
+    },
+    {
+      "id": "risk_w4_s005",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 4,
+        "scale": 0.05,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w4_s015",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 4,
+        "scale": 0.15,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w4_s03",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 4,
+        "scale": 0.3,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w8_s005",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 8,
+        "scale": 0.05,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w8_s015",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 8,
+        "scale": 0.15,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w8_s03",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 8,
+        "scale": 0.3,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w16_s005",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 16,
+        "scale": 0.05,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w16_s015",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 16,
+        "scale": 0.15,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "risk_w16_s03",
+      "family": "risk_backfill",
+      "risk_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "cycle_t2_cw1",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 2,
+        "count_weight": 1.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t2_cw2",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 2,
+        "count_weight": 2.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t2_cw3",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 2,
+        "count_weight": 3.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t4_cw1",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 4,
+        "count_weight": 1.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t4_cw2",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 4,
+        "count_weight": 2.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t4_cw3",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 4,
+        "count_weight": 3.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t6_cw1",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 6,
+        "count_weight": 1.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t6_cw2",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 6,
+        "count_weight": 2.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "cycle_t6_cw3",
+      "family": "cycle",
+      "cycle": {
+        "visit_threshold": 6,
+        "count_weight": 3.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      }
+    },
+    {
+      "id": "post_b25_e06",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 25,
+        "epsilon_floor": 0.6,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b25_e085",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 25,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b50_e06",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.6,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b50_e085",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b100_e06",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 100,
+        "epsilon_floor": 0.6,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b100_e085",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 100,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b150_e06",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 150,
+        "epsilon_floor": 0.6,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_b150_e085",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 150,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "post_reset_b50",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": true
+      }
+    },
+    {
+      "id": "post_reset_b100",
+      "family": "post_progress",
+      "post_progress": {
+        "boost_steps": 100,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": true
+      }
+    },
+    {
+      "id": "epi_w8_q05",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 8,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 0.5
+      }
+    },
+    {
+      "id": "epi_w8_q10",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 8,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      }
+    },
+    {
+      "id": "epi_w8_q20",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 8,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 2.0
+      }
+    },
+    {
+      "id": "epi_w16_q05",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 0.5
+      }
+    },
+    {
+      "id": "epi_w16_q10",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      }
+    },
+    {
+      "id": "epi_w16_q20",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 2.0
+      }
+    },
+    {
+      "id": "epi_w32_q05",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 32,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 0.5
+      }
+    },
+    {
+      "id": "epi_w32_q10",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 32,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      }
+    },
+    {
+      "id": "epi_w32_q20",
+      "family": "episodic",
+      "episodic": {
+        "success": {
+          "window": 32,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 2.0
+      }
+    },
+    {
+      "id": "combo_succ_post",
+      "family": "combination",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      },
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "combo_succ_epi",
+      "family": "combination",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      },
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      }
+    },
+    {
+      "id": "combo_succ_risk",
+      "family": "combination",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      },
+      "risk_backfill": {
+        "window": 8,
+        "scale": 0.15,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "combo_cycle_risk",
+      "family": "combination",
+      "cycle": {
+        "visit_threshold": 4,
+        "count_weight": 2.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      },
+      "risk_backfill": {
+        "window": 8,
+        "scale": 0.15,
+        "decay": 0.9
+      }
+    },
+    {
+      "id": "combo_epi_risk",
+      "family": "combination",
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "risk": {
+          "window": 8,
+          "scale": 0.5,
+          "decay": 0.9
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      }
+    },
+    {
+      "id": "combo_succ_cycle_post",
+      "family": "combination",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      },
+      "cycle": {
+        "visit_threshold": 4,
+        "count_weight": 2.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      },
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      }
+    },
+    {
+      "id": "combo_succ_epi_post",
+      "family": "combination",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      },
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      },
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      },
+      "event_updates": 1
+    },
+    {
+      "id": "gated_full",
+      "family": "combination",
+      "success_backfill": {
+        "window": 16,
+        "scale": 0.3,
+        "decay": 0.93
+      },
+      "risk_backfill": {
+        "window": 8,
+        "scale": 0.15,
+        "decay": 0.9
+      },
+      "episodic": {
+        "success": {
+          "window": 16,
+          "scale": 1.0,
+          "decay": 0.93
+        },
+        "risk": {
+          "window": 8,
+          "scale": 0.5,
+          "decay": 0.9
+        },
+        "similarity_threshold": 0.8,
+        "a6_sigma_px": 12.0,
+        "q_weight": 1.0
+      },
+      "cycle": {
+        "visit_threshold": 4,
+        "count_weight": 2.0,
+        "effect_weight": 0.6,
+        "salience_weight": 0.7,
+        "temperature": 0.5,
+        "epsilon_floor": 0.85,
+        "action6_prob": 0.7
+      },
+      "post_progress": {
+        "boost_steps": 50,
+        "epsilon_floor": 0.85,
+        "reset_explorer_counts": false
+      },
+      "event_updates": 1
+    }
+  ]
+}
