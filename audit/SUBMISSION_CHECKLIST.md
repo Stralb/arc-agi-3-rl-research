@@ -65,3 +65,6 @@ Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_F
 - Official Kaggle version and class nomination: platform confirmation pending.
 - Team contribution statement, Paper Track record and Moodle receipt: follow-up pending.
 - No report, checkpoint or experimental result was changed during this review.
+
+## Defence brief checkpoint — 2026-10-27
+[CASE_FOR_DEFENCE_20261027.md](CASE_FOR_DEFENCE_20261027.md) cross-references all twelve original charges. No submission confirmations were obtained or asserted by this defence. The verified source subset and historical manifest remain distinct from original cluster evidence and official platform records. Missing learning/adaptation curves and confirmed contribution statements remain open. All initial course requirements and deadline statuses are unchanged.
