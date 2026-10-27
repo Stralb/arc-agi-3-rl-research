@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "proposed - awaiting team confirmation",
+  "seed": 2026,
+  "strata": {
+    "click": [
+      "ft09",
+      "lp85",
+      "r11l",
+      "s5i5",
+      "su15",
+      "tn36",
+      "vc33"
+    ],
+    "keyboard": [
+      "g50t",
+      "ls20",
+      "re86",
+      "tr87",
+      "tu93",
+      "wa30"
+    ],
+    "mixed": [
+      "ar25",
+      "bp35",
+      "cd82",
+      "cn04",
+      "dc22",
+      "ka59",
+      "lf52",
+      "m0r0",
+      "sb26",
+      "sc25",
+      "sk48",
+      "sp80"
+    ]
+  },
+  "dev": [
+    "ar25",
+    "cd82",
+    "dc22",
+    "ft09",
+    "g50t",
+    "ka59",
+    "lf52",
+    "ls20",
+    "m0r0",
+    "r11l",
+    "re86",
+    "sc25",
+    "sp80",
+    "su15",
+    "tn36",
+    "tr87",
+    "vc33"
+  ],
+  "reserved": [
+    "bp35",
+    "cn04",
+    "lp85",
+    "s5i5",
+    "sb26",
+    "sk48",
+    "tu93",
+    "wa30"
+  ],
+  "hash": "8819bd3b28d9"
+}
