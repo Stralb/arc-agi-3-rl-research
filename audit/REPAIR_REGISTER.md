@@ -65,3 +65,18 @@ No paper/code/checkpoint/result changes in this update.
 
 ## Moderator dispositions — 2026-10-27
 [SCIENTIFIC_CROSS_EXAMINATION_20261027.md](SCIENTIFIC_CROSS_EXAMINATION_20261027.md) establishes **no confirmed defect** in uninspected DQN/PPO training source. It establishes missing learning/adaptation curves and no individual DQN-I1 component attribution; E126 architecture confirmed. **P0** recover original six-arm source/108 trial records, check PPO mask ratios and DQN-I2 conditional schedule; obtain legitimate budget-indexed curves and Kaggle receipt. **P1** reconcile all-in pretraining and source/checkpoint lifecycle; original SDK E126 traces. No manuscript alteration performed.
+
+
+## Judicial order and revised priorities — 2026-10-27
+Full 12-charge judgment and evidence-grounded marks: [JUDICIAL_ASSESSMENT_20261027.md](JUDICIAL_ASSESSMENT_20261027.md). **No prior repair is considered completed solely because it was described in the report.** Charge dispositions: CP-04 SUSTAINED; CP-03/06/08/09/10/12 PARTIALLY SUSTAINED; CP-11 DISMISSED as charge of unsupported unseen generalisation; CP-01/02/05/07 INSUFFICIENT EVIDENCE. All **OPEN** technical steps below are safe evidence-recovery/verification tasks, not authorization to invent, overwrite or publish proprietary assets.
+
+| Repair ID | Priority | Judicial action | Status | Closure evidence |
+|---|---|---|---|---|
+| RR-033 | P0 | Recover **all six original coursework** DQN/PPO sources, frozen configs/checkpoints and all 72+12+24 episodes; independently recompute score/action/walltime/update and verify environment/scorer | OPEN | Primary files SHA, verified training/eval and raw-to-table reconciliation |
+| RR-034 | P0 | Determine DQN-I2 substantive vs epsilon tuning by inspecting branch, counters, resets, matched I1/I2 decision consequences | OPEN | Source + matched action diagnostics, optionally original epsilon-only control |
+| RR-035 | P0 | Check PPO masked log-prob type/coordinate support at collection/update, old/new ratio, GAE terminal/truncation and true parameter updates | OPEN | Invariant tests and original rollout/optimizer source |
+| RR-036 | P0 | Find genuine learning/adaptation measurements vs charged interaction budget; do not substitute time-to-first-reward as learning curve | OPEN | Verified original budget-indexed series or candid disclosure of unresolved requirement |
+| RR-037 | P0 | Obtain official E126 Kaggle submission ID57690887 receipt, successful score and SAST timestamp, source/hash and nominated class-team eligibility | OPEN | Platform record; reconcile historical manifest chronology, no invented receipt |
+| RR-038 | P0 | Finalise actual member contribution statement, Paper Track link + saved text and Moodle ZIP/receipt; verify code/no secrets | OPEN | Authentic external submission records and manifest |
+| RR-039 | P1 | Record DQN-I1 pretrained model rights/origin/data exposure/training compute distinct from E126 peer CNN; isolate online/evaluation budgets | OPEN | Licence/permissions and grounded cost/provenance accounting |
+| RR-040 | P1 | Once primary evidence recovered, rebalance 8-page main only as scientifically supported: six-stage coursework central, genuine curves, bundles/control limits, E126 separate | BLOCKED pending RR-033/036 | Consistent source-linked report without deleting genuine nulls |
