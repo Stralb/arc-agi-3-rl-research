@@ -111,3 +111,7 @@ Three required *native-progress-versus-interaction-budget* displays added and ve
 
 ## Prompt 5 recovery checkpoint — 2026-10-27
 [Executed evidence record](PROMPT5_EXECUTION_RECOVERY_20261027.md): one **real new** public SDK random failure trajectory with 12 actions and full authentic frame/action log, E012/N001/N002 historical neural documentation with segregated source tiers, verified E126 saved arithmetic and report-only E128 108 events preserved. Does **not** close actual original DQN/PPO implementation, genuine learner checkpoint curves, substantive E128 I2, official Kaggle submission or team receipts. Current E134 paper untouched; include new recovery ZIP (SHA `8705a1c...`) as supplementary evidence if rights/size permit, not as matching final Kaggle notebook.
+
+
+## Prompt 5 new real native SDK control (2026-10-27)
+[New verified 12-run random result](PROMPT5_MATCHED_RANDOM_20261027.md): 0/12 native levels, 968 real charged SDK actions, all GAME_OVER, original JSONL full-frame/action traces included in separate ZIP for author inclusion if desired. **Does not** replace missing DQN/PPO matching submission source, official Kaggle receipt, Paper Track text, team roles or missing checkpoint/adaptation curves. The full trace ZIP is supplementary experiment evidence, NOT an accepted Kaggle notebook or Moodle ZIP.
