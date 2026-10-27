@@ -98,3 +98,6 @@ Reviewed LaTeX/PDF source package created: seven physical pages, two primary fig
 
 ## E131 urgent report (2026-10-27)
 Compiled 8 total pages with references on p8; included RLJ/RLC 2026.1 style copy and commented-out cover, 36/36 manuscript/figure/citation/data QA checks, E129 original files preserved in delivery ZIP. Actual official lecturer style identity unverified. Main coursework performance figures are from documented contemporary report results and NOT independent SDK replay; true checkpoint/adaptation curve still missing. Individual contributions, official Kaggle receipt/class rank, Paper Track and Moodle records remain OPEN. See [execution record](E131_URGENT_REWRITE_20261027.md).
+
+## E132 figures status — 2026-10-27
+Three required *native-progress-versus-interaction-budget* displays added and verified in E132 PDF, with exact 12-run denominator and no synthetic events. They are explicitly NOT verified checkpoint-learning curves, and separate lecturer learning/adaptation-evidence requirement remains only partially addressed. Paper uses included RLJ 2026.1 review style copy, eight main pages/references p9; original E129/E131 files preserved. See [E132 record](E132_THREE_NATIVE_CURVES_20261027.md). Official lecturer style SHA, team contributions and platform submissions remain unresolved.
