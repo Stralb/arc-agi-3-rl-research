@@ -57,3 +57,11 @@ Read [FORENSIC_CODE_AND_RESULTS_AUDIT.md](FORENSIC_CODE_AND_RESULTS_AUDIT.md) fo
 - UNVERIFIED: raw six-arm coursework training and evaluation runs; correctness of PPO masked log-probs and DQN-I2 mechanism.
 - UNVERIFIED/CONTRADICTED across snapshots: E126 official Kaggle ID 57690887 and 0.33 must be independently confirmed; earlier manifest predates possible submission.
 - MISSING: actual contribution statement, Paper Track and Moodle success receipts, class nominated rank.
+
+## Assessment follow-up (27 October 2026)
+Full 12-item academic assessment case: [CASE_FOR_PROSECUTION_20261027.md](CASE_FOR_PROSECUTION_20261027.md).
+- Learning or adaptation curves: incomplete in E128; source recovery remains open.
+- Coursework DQN/PPO code and original episode records: verification pending.
+- Official Kaggle version and class nomination: platform confirmation pending.
+- Team contribution statement, Paper Track record and Moodle receipt: follow-up pending.
+- No report, checkpoint or experimental result was changed during this review.
